@@ -1,0 +1,149 @@
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font: 12px/1.5 tahoma,arial,"Microsoft YaHei";
+}
+
+/* 顶部导航条 */
+.header-nav{
+	width: 100%;
+	height: 110px;
+	background: #161616;
+}
+.nav-container{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* logo图 */
+.nav-container .logo-wrap{
+	float: left; 
+	padding: 11px 0;
+}
+.nav-container .logo-wrap a,.nav-container .logo-wrap img{
+	display: block;
+	height: 88px;
+    width: auto;
+}
+
+/* 导航菜单 */
+.nav-container .nav-desktop{
+	float: right;
+	width: 990px;
+	margin-top: 20px;
+}
+/* .nav-desktop ul.menu-box{
+	overflow: hidden;
+} */
+.nav-desktop ul li{/*导航条通用*/
+	width: 190px;
+	text-align:center;
+	position: relative;
+}
+.nav-desktop ul li a{
+	display: block;
+	line-height: 44px;
+	color: #fff;
+	font-size: 14px;
+	margin: 0px 10px;
+}
+.nav-desktop ul li a:hover,.nav-desktop ul li.active a{
+	background: #0068CA;
+	color: #fff;
+}
+/*一级菜单*/
+.nav-desktop ul.menu-box>li{
+	float: left;
+}
+.nav-desktop ul li:hover ul{
+	display: block;
+}
+/*二级菜单*/
+.nav-desktop ul li ul{
+	position: absolute;
+	left: -40px;
+	display: none;
+	z-index: 99;
+}
+.nav-desktop ul li ul li a{
+	background: #fff;
+	color: #0068CA;
+	margin: 5px 10px;
+}
+
+/* banner轮播图 */
+.banner{
+	width: 100%;
+	position: relative;
+}
+/*.banner .slide-main .img-item span{
+	display: block;
+	height: 100%;
+	background: url(../img/banner.jpg) center no-repeat;
+}*/
+.banner .slide-txt{
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -160px;
+	z-index: 9;
+	text-align: center;
+}
+.banner .slide-txt p{
+	font-size: 40px;
+	color: #fff;
+	margin: 0;
+	line-height: 50px;
+}
+.banner .slide-txt p:nth-child(2){
+	color: #e8e8e8;
+}
+.banner .slide-txt p:nth-child(3){
+	color: #d1d1d1;
+}
+.banner .slide-main .img-item{
+	position: absolute;
+}
+.banner .slide-main .img-item:nth-child(1){
+	z-index: 5;
+}
+.banner .slide-main .img-item img{
+	display: block;
+	width: 100%;
+}
+.slide-container,.slide-main,.img-item{
+	height: 100%;
+}
+
+
+/* 浮动导航 */
+.mid-nav ul{
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+}
+.mid-nav ul li{
+	float: left;
+	width: 25%;
+	line-height: 60px;
+	text-align: center;
+}
+.mid-nav ul li a{
+	display: block;
+}
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {  }
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {  }
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) { }
