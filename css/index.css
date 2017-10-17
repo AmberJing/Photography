@@ -1,3 +1,4 @@
+dl,dt,dd{margin: 0;}
 ul,li{
 	list-style: none;
 }
@@ -7,8 +8,11 @@ a{
 body{
 	font: 12px/1.5 tahoma,arial,"Microsoft YaHei";
 	background: #161616;
+	color: #333;
 }
-
+h2{
+	font-weight: normal;
+}
 /* 顶部导航条 */
 .header-nav{
 	width: 100%;
@@ -77,13 +81,13 @@ body{
 	margin: 5px 10px;
 }
 
-/* banner轮播图 */
-.banner{
+/* key-visual轮播图 */
+.key-visual{
 	width: 100%;
 	position: relative;
 }
 /* 悬浮文字 */
-.banner .slide-txt{
+.key-visual .slide-txt{
 	position: absolute;
 	top: 100px;
 	left: 50%;
@@ -91,20 +95,20 @@ body{
 	z-index: 9;
 	text-align: center;
 }
-.banner .slide-txt p{
+.key-visual .slide-txt p{
 	font-size: 40px;
 	color: #fff;
 	margin: 0;
 	line-height: 50px;
 }
-.banner .slide-txt p:nth-child(2){
+.key-visual .slide-txt p:nth-child(2){
 	color: #e8e8e8;
 }
-.banner .slide-txt p:nth-child(3){
+.key-visual .slide-txt p:nth-child(3){
 	color: #d1d1d1;
 }
 /*图片轮轮播*/
-/*.banner .slide-container{
+/*.key-visual .slide-container{
 	max-height: 516px;
 }*/
 .slide-container .slide-main .img-item{
@@ -181,13 +185,14 @@ body{
 	display: block;
 	color: #fff;
 }
-/*  */
+/* 内容主体部分 */
 .section{
 	background: #5b5b5b;
 }
 .container{
 	width: 1200px;
 	margin: 0 auto;
+	position: relative;
 }
 .section-text{
 	text-align:center;
@@ -196,7 +201,6 @@ body{
 .section-text h2{
 	font-size: 32px;
 	color: #fff; 
-	font-weight: normal;
 	margin: 0;
 }
 .section-text h2 span{
@@ -205,34 +209,277 @@ body{
 .section-text p{
 	color: #9b9b9b;
 }
+/* section1 ACTIVITY 最新活动*/
 .section1{
 	height: 779px;
 }
-.img-style{float: left;overflow:hidden;}
-.img-style img{height: 100%;}
-.item1{
-	width: 45%;
-	height: 272px;
+.section1 .section-main{
+	margin: 0 40px;
 }
-.item2{
-	width:35%;
-	height: 272px;
-}
-.item3{
-	width: 20%;
-	height: 350px;
-}
-.item4{
-	width: 30%;
-	height: 270px;
-}
-.item5{
-	width: 50%;
+.section1 .img-style{
+	float: left;
+	overflow:hidden;
 	height: 275px;
+	position: relative;
 }
-.item6{
-	width: 20%;
+.section1 .img-style dl{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+    height: 100%;
+    margin: 0;
+	font-size: 40px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 50px;
+}
+.section1 .img-style dl dt{
+	margin-top: 80px;
+}
+.section1 .img-style dl dd{
+	font-size: 26px;
+	letter-spacing: 1px;
+}
+.section1 .img-style img{
+	position: relative;
+	height: 100%;
+}
+.section1 .item1{
+	width: 41%;
+}
+.section1 .item2{
+	width:36%;
+}
+.section1 .item3{
+	width: 23%;
+	height: 350px;
+	float: right;
+}
+.section1 .item3 img{left: -55%;}
+.section1 .item3 dl{line-height: 40px;}
+.section1 .item3 dl dt{font-size: 28px;margin-top: 135px;}
+.section1 .item3 dl dd{font-size: 20px;}
+.section1 .item4{
+	width: 34%;
+}
+.section1 .item4 img{left: -42%;}
+.section1 .item5{
+	width: 43%;
+}
+.section1 .item5 img{width: 100%;height: auto;}
+.section1 .item6{
+	width: 23%;
 	height: 200px;
+}
+.section1 .item6 img{left: -19%;}
+.section1 .item6 dl{line-height: 40px;}
+.section1 .item6 dl dt{font-size: 28px;margin-top: 65px;}
+.section1 .item6 dl dd{font-size: 20px;}
+
+/* section2 WEDDING 婚纱摄影 */
+.section-style2{
+	height: 742px;
+}
+.section-style2 ul{
+	padding: 0;
+	overflow: hidden;
+}
+.section-style2 ul li{
+	float: left;
+	width: 23%;
+	height: 540px;
+	margin: 0 1%;
+	overflow:hidden;
+	background: #fff;
+}
+.section-style2 ul li .p-img{
+	height: 425px;
+	position: relative;
+	overflow:hidden;
+}
+.section-style2 ul li a{
+	display: block;
+	height: 100%;
+}
+.section-style2 ul li a img{
+	display: block;
+	height: 100%;
+}
+.section-style2 ul li .p-name{
+	position: absolute;
+	margin: 0;
+	padding: 6px 0;
+	font-size: 14px;
+    color: #fff;
+    line-height: 1.4;
+    width: 100%;
+    text-align:center;
+    background: rgba(0,0,0,.4);
+}
+.section-style2 ul li .p-name a{
+	display: block;
+	color: inherit;
+}
+.section-style2 ul li .product-info{
+	height: 85px;
+	padding: 15px 0;
+	text-align: center;
+}
+.section-style2 ul li .product-info .p-text{
+	line-height: 1;
+    white-space: nowrap;
+    font-family: "宋体";
+    font-size: 16px;
+}
+.section-style2 ul li .product-info .p-value{
+	color: #0066cc;
+	font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.section-style2 ul li .product-info .p-button a{
+	width: 100px;
+	padding: 3px 6px;
+	margin: 20px auto 5px;
+	color: #0066cc;
+	border: 1px solid #0066cc;
+	font-size: 14px;
+}
+
+/* section4 精品合集 */
+.section4{
+	height: 818px;
+}
+.section4 .tab-nav{
+	height: 29px;
+	margin-bottom: 20px;
+}
+.section4 .tab-nav li{
+	width: 31%;
+	margin: 0 1%;
+	color: #0066cc;
+	height: 100%;
+	background: #5b5b5b;
+	font-size: 14px;
+	text-align: center;
+	line-height: 28px;
+	cursor: pointer;
+}
+.section4 .tab-nav li:hover,.section4 .tab-nav li.tabCurItem{
+	background: #0066cc;
+    color: #ffffff;
+}
+/* section banner1*/
+.banner1{
+	height: 425px;
+	background: url(../img/20170801170524238.jpg) no-repeat;
+	background-size: 100% auto;
+}
+.section-text2{
+	width: 400px;
+	background: rgba(255,255,255,0.3);
+	position: absolute;
+	right: 0;
+	text-align: center;
+	padding: 5px 0 40px 0;
+}
+.section-text2 h2{
+	font-size: 36px;
+	line-height: 36px;
+	margin-bottom: 2px;
+}
+.section-text2 h2 span{
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+.section-text2 h2 + span{
+	font-size: 46px;
+	color: #c92424;
+	font-family: microsoft yahei;
+}
+.section-text2 h2 + span >i{
+	font-style: inherit;
+	font-size: 24px;
+}
+.section-text2 p{
+	font-size: 30px;
+	line-height: 40px;
+	margin: 5px 0;
+}
+.section-text2 p:nth-of-type(2){
+	font-size: 24px;
+}
+.section-text2 .learn-more{
+	font-size: 20px;
+	color: #fff;
+	background: #c92424;
+	line-height: 40px;
+	padding: 8px 30px;
+}
+/* section banner2*/
+.banner2{
+	height: 451px;
+	background: url(../img/20170802135341968.jpg) no-repeat;
+	background-attachment: fixed;
+}
+.banner2 .section-text2{
+	left: 0;
+	top: 35px;
+}
+
+/* footer */
+.footer{
+	height: 335px;
+}
+.footer-container{
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+}
+.footer-container dl{
+	margin-top: 30px;
+	color: #fff;
+	float: left;
+}
+.footer-container dl:nth-child(1){
+	width: 35%;
+}
+.footer-container dl:nth-child(2){
+	width: 36%;
+	margin-right: 4%;
+}
+.footer-container dl:nth-child(3){
+	width: 25%;
+}
+.footer-container dl dt{
+	font-size: 20px;
+	line-height: 40px;
+	letter-spacing: 2px;
+}
+.footer-container dl dd{
+	font-size: 14px;
+	line-height: 30px;
+	color: #bfbfbf;
+}
+.footer-container dl dd p{
+	margin: 10px 0;
+}
+.footer-container dl.introduction dd{
+	text-indent: 2em;
+}
+.footer-container dl.navigation ul{
+	padding: 0;
+}
+.footer-container dl.navigation ul a{
+	color: #bfbfbf;
+	font-size: 12px;
+}
+.footer-container .copyright{
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+	padding-top: 20px;
+	clear: both;
 }
 /* 超小屏幕（手机，小于 768px） */
 /* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */

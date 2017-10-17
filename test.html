@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	//样式
+<style type="text/css">
+
+
+body { background:#f9f9f9; margin:0 auto; font:12px/24px tahoma, Helvetica, Arial; text-align:center; }
+body,iframe,div,p,h1,h2,h3,h4,h5,h6,fieldset,ul,dl,dt,dd,form,input,button,textarea,select,i { margin:0px; padding:0px; font-weight:normal; }
+ul { list-style:none; overflow:hidden; }
+img { border:none; }
+
+
+.content { width:960px; margin:10px auto; }
+
+
+.case-list { position:relative; width:960px; }
+.case-list li { display:block; position:absolute; border:1px solid #ddd; width:200px; padding:5px; border-radius:5px; background-color:#fff; }
+.case-list li img { display:block; width:200px; border-radius:5px; }
+</style>
+ 
+//布局
+<!-- content -->
+<div class="content" id="content">
+   <ul class="case-list" id="case-list">
+       <li><img src="images/1.jpg" alt="" /></li>
+       <li><img src="images/2.jpg" alt="" /></li>
+       <li><img src="images/3.jpg" alt="" /></li>
+       <li><img src="images/4.jpg" alt="" /></li>
+       <li><img src="images/5.jpg" alt="" /></li>
+       <li><img src="images/6.jpg" alt="" /></li>
+       <li><img src="images/7.jpg" alt="" /></li>
+       <li><img src="images/8.jpg" alt="" /></li>
+       <li><img src="images/9.jpg" alt="" /></li>
+       <li><img src="images/10.jpg" alt="" /></li>
+       <li><img src="images/11.jpg" alt="" /></li>
+       <li><img src="images/12.jpg" alt="" /></li>
+       <li><img src="images/13.jpg" alt="" /></li>
+       <li><img src="images/14.jpg" alt="" /></li>
+       <li><img src="images/15.jpg" alt="" /></li>
+       <li><img src="images/16.jpg" alt="" /></li>
+       <li><img src="images/17.jpg" alt="" /></li>
+       <li><img src="images/18.jpg" alt="" /></li>
+       <li><img src="images/19.jpg" alt="" /></li>
+       <li><img src="images/20.jpg" alt="" /></li>
+   </ul>
+</div>
+
+ 
+//脚本
+<script src="JsCss/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+   var cases = $("#case-list li");
+   var case_h = [[],[],[],[]];
+   var sum = [0,0,0,0];
+   $.each(cases, function(i){
+       var m = i%4;
+       var step = Math.floor(i/4);
+       cases.eq(i).css("left", 220*m+"px");
+       case_h[m].push(cases.eq(i).height());
+       if(!step){
+           cases.eq(i).css("top", "0");
+       }else{
+           var num = 0;
+           for(var n=0; n<step; n++){
+               num += case_h[m][n] + 20;
+           }
+           cases.eq(i).css("top", num+"px");
+       }
+   });
+   $(case_h).each(function(i){
+       $(case_h[i]).each(function(j){
+           sum[i] += case_h[i][j];
+       });
+   });
+   cases.parent().css("height", sum.sort(function(a,b){return a<b?a:-1})[0]+100+"px");
+});
+</script>
+ 
+</body>
+</html>
