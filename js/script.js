@@ -1,5 +1,31 @@
 $(function () {
 	/*
+		下雨
+	*/
+
+	rainFall();
+	function rainFall() {
+	    setTimeout(function () {
+	        var leftRandom = RandomNumBoth(0,100);
+	        var temp ='<div style="left:'+leftRandom+'%;" class="rain animated xiayu"></div>';
+	        $(".slide-container").append(temp);
+	        rainFall();
+	        if($('.yudi').length>=150){
+	            $('.yudi').remove();
+	        }
+	    },100)
+	}
+	function RandomNumBoth(Min,Max){
+	    var Range = Max - Min;
+	    var Rand = Math.random();
+	    var num = Min + Math.round(Rand * Range); //四舍五入
+	    return num;
+	}
+
+
+
+
+	/*
 		轮播
 	 */
 	

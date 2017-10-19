@@ -1577,3 +1577,59 @@
 .slideOutUp {
   animation-name: slideOutUp;
 }
+
+@keyframes rotateIn {
+  /*from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }*/
+
+  0% {
+    transform: rotateZ(360deg) scale(0);
+  }
+
+ /* 20% {
+    transform:rotateZ(-360deg) scale(0.2);
+  }
+
+ 40% {
+    transform:rotateZ(360deg) scale(0.4);
+  }
+
+  60% {
+    transform:rotateZ(0deg) scale(0.6);
+  }
+
+  80% {
+    transform:rotateZ(360deg) scale(0.8);
+  }*/
+  to {
+    transform: rotateZ(0deg) scale(1);
+  }
+}
+
+.rotateIn {
+  animation-name: rotateIn;
+  animation-duration: 1s;
+}
+
+.xiayu {
+    animation: xiayu 2s forwards;
+    -webkit-animation: xiayu 2s forwards;
+}
+
+
+@keyframes xiayu /* Firefox */
+{
+
+    to {
+        top: 120%;
+    }
+}
+
+@-webkit-keyframes xiayu /* Safari 和 Chrome */
+{
+
+    to {
+        top: 120%;
+    }
+}
