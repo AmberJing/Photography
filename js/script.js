@@ -1,60 +1,114 @@
-$(function () {
+/*
+	轮播
+ */
+var slide_container = $('.slide-container');	// 获取轮播容器
+var imgHeight = slide_container.find('img').height();	// 获取图片的高度和宽度
+var imgCount = slide_container.find('.img-item').length;	// 计算图片数量
+var currentIndex = 0;	//当前索引
+var timer = undefined; 	//定时器对象
+
+slide_container.height(imgHeight);
+// 除第一张外都隐藏
+slide_container.find(".img-item:gt(0)").css("display","none");
+
+// 动态添加圆点切换按钮
+var btnTemp = '<span class="active"></span>';
+for (var i = 1; i < imgCount; i++) {
+	btnTemp += '<span></span>';
+}
+slide_container.find('.slide-btns').append(btnTemp);
+
+// 圆点按钮点击事件
+slide_container.find(".slide-btns span").click(function() {
+	// 关闭已经存在的定时器
+	clearInterval(timer);
+
+	// 赋值索引
+	currentIndex = $(this).index();
+	// 轮播
+	slide(currentIndex);
+
+	//开启新的定时器
+	timer = setInterval("slideAnimation()", 4000);
+	
+});
+
+function slide(currentIndex){
+	
+	console.log(currentIndex);
+	// 设置当前按钮背景色
+	slide_container.find(".slide-btns span").removeClass('active');
+	slide_container.find(".slide-btns span").eq(currentIndex).addClass('active');
+	
+	// 显示当前图片
+	slide_container.find(".img-item").hide();
+	slide_container.find(".img-item").eq(currentIndex).fadeIn(1000); //淡入效果
+
+}
+
+// 左箭头点击切换
+slide_container.find('.btn-prev').click(function(){
+
+	currentIndex --;
+
+	//如果超过第一张，设置到最后一张
+	if (currentIndex < 0) {
+		currentIndex = imgCount - 1;
+	}
+
+	slide_container.find(".slide-btns span").eq(currentIndex).click();
+})
+// 右箭头点击切换
+slide_container.find('.btn-next').click(function(){
+
+	currentIndex ++ ;
+
+	//如果超过最后一张，设置到第一张
+	if (currentIndex >= imgCount) {
+		currentIndex = 0;
+	}
+	slide_container.find(".slide-btns span").eq(currentIndex).click();
+})
+//设置循环定时器
+timer = setInterval("slideAnimation()", 4000);
+function slideAnimation() {
+	currentIndex ++;
+	if (currentIndex == imgCount) {
+		//如果图片播放到最后一张，那么index的值恢复为0
+		currentIndex = 0;
+	}
+
+	slide(currentIndex);
+}
+
 	/*
 		下雨
 	*/
 
-	rainFall();
-	function rainFall() {
-	    setTimeout(function () {
-	        var leftRandom = RandomNumBoth(0,100);
-	        var temp ='<div style="left:'+leftRandom+'%;" class="rain animated xiayu"></div>';
-	        $(".slide-container").append(temp);
-	        rainFall();
-	        if($('.yudi').length>=150){
-	            $('.yudi').remove();
-	        }
-	    },100)
-	}
-	function RandomNumBoth(Min,Max){
-	    var Range = Max - Min;
-	    var Rand = Math.random();
-	    var num = Min + Math.round(Rand * Range); //四舍五入
-	    return num;
-	}
+	// rainFall();
+	// function rainFall() {
+	//     setTimeout(function () {
+	//         var leftRandom = RandomNumBoth(0,100);
+	//         var temp ='<div style="left:'+leftRandom+'%;" class="rain animated xiayu"></div>';
+	//         $(".slide-container").append(temp);
+	//         rainFall();
+	//         if($('.yudi').length>=150){
+	//             $('.yudi').remove();
+	//         }
+	//     },100)
+	// }
+	// function RandomNumBoth(Min,Max){
+	//     var Range = Max - Min;
+	//     var Rand = Math.random();
+	//     var num = Min + Math.round(Rand * Range); //四舍五入
+	//     return num;
+	// }
 
 
 
 
-	/*
-		轮播
-	 */
-	
-	// 获取轮播容器
-	var slide_container = $('.slide-container');
-	// 获取图片的高度和宽度
-	var imgHeight = slide_container.find('img').height();
-	// 计算图片数量
-	var imgCount = slide_container.find('.img-item').length;
-	//当前索引
-	var currentIndex = 0;
 
-	// 设置容器高度与图片一样
-	slide_container.height(imgHeight);
-
-	// 动态添加圆点切换按钮
-	var btnTemp = '<div class="slide-btns">';
-	for (var i = 0; i < imgCount; i++) {
-		btnTemp += '<span></span>';
-	}
-	slide_container.append(btnTemp);
-
-	// 原点按钮点击切换时间
-	// slide_container.find(".slide-btns");
-	
-	// 左箭头点击切换
-	slide_container.find('btn-prev').click(function(){
-
-	})
+$(function () {	
 })
 
 
@@ -74,7 +128,7 @@ $(function () {
 //             'duration':3,               // 切换时间间隔
 //             'animation':0.5         // 动画时间
 //         };
-//         config = $.extend(true, this._default, config);
+//         config = $.extend(true, this._default, config);// 合并this._default和config(true->深度拷贝)
 //         this.config = config;
 //         this.init(config);
 //     }

@@ -124,9 +124,6 @@ h2{
 .slide-container .slide-main .img-item{
 	position: absolute;
 }
-.slide-container .slide-main .img-item:nth-child(1){
-	z-index: 5;
-}
 /*.slide-container .slide-main .img-item span{
 	background: url(../images/banner.jpg) center top no-repeat;
     background-size: cover;
@@ -154,6 +151,9 @@ h2{
 	margin: 0 4px;
 	border-radius: 100%;
 	cursor: pointer;
+}
+.slide-container .slide-btns span.active{
+	background-color:#eee;
 }
 .slide-container a{
 	display: block;
