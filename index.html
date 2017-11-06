@@ -9,19 +9,46 @@
 	<link rel="shortcut icon" href="img/camera.png">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- 引入Font Awesome -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+	<div class="mask-section"></div>
 	<!-- header导航 start -->
 	<div class="header-nav">
 		<div class="nav-container">
 			<!-- logo 图 -->
 			<div class="logo-wrap animated swing">
-				<a href="index.html"><img src="img/logo.png" alt="LOGO"></a> 
+				<a href="index.html">
+					<img class="forPC" src="img/logo-mobile.png" alt="LOGO" >  
+					<img class="forMob" src="img/logo-mobile1.png" alt="LOGO" >
+				</a> 
 			</div><!-- logo图 End -->
 
-			<!-- 导航菜单 -->
-			<div class="nav-desktop">
+			<!-- 导航菜单（pc版） -->
+			<div class="menu menu-desktop forPC">
+				<ul class="menu-box">
+					<li class="active"><a href="">首页</a></li>
+					<li>
+						<a href="">全部产品</a>
+						<ul class="sub-menu">
+							<li><a href="#">人物摄影</a></li>
+							<li><a href="#">风景摄影</a></li>
+						</ul>
+					</li>
+					<li><a href="">精品摄影</a></li>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">联系我们</a></li>
+				</ul>	
+			</div><!-- 导航菜单 End -->
+
+			<!-- 导航菜单（mobile版） -->
+			<div class="menu menu-mobile forMob">
+				<a class="menu-icon">
+					<span class="fa fa-bars"></span>
+				</a>
 				<ul class="menu-box">
 					<li class="active"><a href="">首页</a></li>
 					<li>
@@ -40,6 +67,30 @@
 					<li><a href="">联系我们</a></li>
 				</ul>	
 			</div><!-- 导航菜单 End -->
+			
+			<!-- 搜索 -->
+			<div class="search-wrap">
+				<i class="fa fa-search"></i>
+			</div>
+			<div class="search-container">
+				<input id="searchKeyword" type="input" class="input-search" placeholder="搜索" >
+				<a href="javascript:void(0);" class="search-cancel-btn">取消</a>
+			</div>
+			<!-- 用户中心 -->
+			<div class="user-center">
+				<!-- 未登录 -->
+				<div class="login">
+					<a href="login.html"><i class="fa fa-user-o"></i></a>
+				</div>
+
+				<!-- 已登录 -->
+				<!-- <ul class="unlogin">
+						<i class="user-icon"></i>
+						<li>交易记录</li>
+						<li>个人资料</li>
+					头像、消息。。。
+				</ul> -->
+			</div>
 		</div><!-- nav-container End -->
 	</div><!-- header导航 End -->
 
@@ -89,42 +140,42 @@
 				<p>I love three things in this world. Sun, moon and you. Sun for morning, moon for night , and you forever.</p>
 			</div>
 			<div class="section-main">
-				<div class="img-style item1 animated pulse">
+				<div class="img-style item1">
 					<dl>
 					   <dt>幸福瞬间</dt>
 					   <dd>a moment of bliss</dd>
 					</dl>
 					<img src="img/blo1.jpg">
 				</div>
-				<div class="img-style item2 animated pulse">
+				<div class="img-style item2">
 					<dl>
 					   <dt>婚纱摄影</dt>
 					   <dd>wedding photo</dd>
 					</dl>
 					<img src="img/blo10.jpg">
 				</div>
-				<div class="img-style item3 animated pulse">
+				<div class="img-style item3">
 					<dl>
 					   <dt>关于我们</dt>
 					   <dd>about us</dd>
 					</dl>
 					<img src="img/blo11.jpeg">
 				</div>
-				<div class="img-style item4 animated pulse">
+				<div class="img-style item4">
 					<dl>
 					   <dt>优质服务</dt>
 					   <dd>knight sarvice</dd>
 					</dl>
 					<img src="img/blo12.jpeg">
 				</div>
-				<div class="img-style item5 animated pulse">
+				<div class="img-style item5">
 					<dl>
 					   <dt>产品推荐</dt>
 					   <dd>our product</dd>
 					</dl>
 					<img src="img/blo15.jpg">
 				</div>
-				<div class="img-style item6 animated pulse">
+				<div class="img-style item6">
 					<dl>
 					   <dt>联系我们</dt>
 					   <dd>connect us</dd>

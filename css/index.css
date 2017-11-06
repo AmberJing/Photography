@@ -1,3 +1,5 @@
+/*先宽高，后定位，再字体相关*/
+/*common.css*/
 dl,dt,dd{margin: 0;}
 ul,li{
 	list-style: none;
@@ -7,12 +9,16 @@ a{
 }
 body{
 	font: 12px/1.5 tahoma,arial,"Microsoft YaHei";
-	background: #161616;
+	/*background: #161616;*/
 	color: #333;
 }
 h2{
 	font-weight: normal;
 }
+.forPC{display: block;}
+.forMob{display: none;}
+
+
 .rain{
 	width: 2px;
 	height: 10px;
@@ -22,73 +28,141 @@ h2{
 	background: #fff;
 	opacity: 0.5;
 }
+/*index.css*/
+
 /* 顶部导航条 */
 .header-nav{
 	width: 100%;
-	height: 110px;
+	height: 70px;
 	background: #161616;
 }
-.nav-container{
+.header-nav .nav-container{
 	width: 1200px;
 	height: 100%;
 	margin: 0 auto;
+	position: relative;
+	z-index: 99;
+	/*或者
+		height: 100%;
+	    margin: 0 70px;
+	    position: relative;
+    */
 }
 
 /* logo图 */
 .nav-container .logo-wrap{
-	float: left; 
-	padding: 11px 0;
+	position: absolute;
+	top: 5px;
+	left: 0; 
 }
-.nav-container .logo-wrap a,.nav-container .logo-wrap img{
-	display: block;
-	height: 88px;
-    width: auto;
+.nav-container .logo-wrap img{
+	width: 170px;
+	height: 60px;
 }
-
-/* 导航菜单 */
-.nav-container .nav-desktop{
-	float: right;
-	width: 990px;
-	margin-top: 20px;
+/* menu菜单 */
+.nav-container .menu-desktop{
+	height: 100%;
+	text-align: center;
 }
-/* .nav-desktop ul.menu-box{
-	overflow: hidden;
-} */
-.nav-desktop ul li{/*导航条通用*/
-	width: 190px;
-	text-align:center;
+.nav-container .menu-desktop ul.menu-box{/*ul.menu-box*/
+	height: 46px;/* 浏览器默认有margin:12px */
+    display: inline-block;/* 利用行内元素居中对齐*/
+}
+.menu-desktop ul li{/*多级menu样式通用*/
+	width: 140px;
+	height: 46px;
 	position: relative;
+	text-align:center;
 }
-.nav-desktop ul li a{
+.menu ul li a{
 	display: block;
-	line-height: 44px;
-	color: #fff;
-	font-size: 14px;
 	margin: 0px 10px;
+	line-height: 46px;
+	font-size: 14px;
+	color: #fff;
 }
-.nav-desktop ul li a:hover,.nav-desktop ul li.active a{
+.menu ul li:hover>a,.menu ul li.active>a{
 	background: #0068CA;
 	color: #fff;
 }
-/*一级菜单*/
-.nav-desktop ul.menu-box>li{
+/*一级菜单(横向排列)*/
+.menu-desktop ul.menu-box>li{
 	float: left;
 }
-.nav-desktop ul li:hover ul{
+.menu-desktop ul li:hover ul{
 	display: block;
 }
-/*二级菜单*/
-.nav-desktop ul li ul{
+/*二级菜单*(纵向排列)*/
+.menu-desktop ul li ul{
 	position: absolute;
 	left: -40px;
-	display: none;
 	z-index: 99;
+	display: none;
 }
-.nav-desktop ul li ul li a{
+.menu-desktop ul li ul>li{
+	margin: 8px 0px;
+}
+.menu-desktop ul li ul li a{
 	background: #fff;
 	color: #0068CA;
-	margin: 5px 10px;
 }
+/* 搜索 & 用户中心 */
+.nav-container .search-wrap,.nav-container .user-center{
+	width: 70px;
+	height: 100%;
+	position: absolute;
+	top: 0; 
+	right: 0;/* 搜索 */
+	text-align: center;
+	line-height: 70px;
+}
+.nav-container .search-wrap i,.nav-container .user-center i{
+	font-style: normal;
+    color: #fff;
+    font-size: 26px;
+    vertical-align: middle;
+}
+.nav-container .search-wrap{right: 70px;}
+.nav-container .user-center i{font-weight: 600;}
+
+
+.search-container{
+    height: 70px;
+    padding: 0 10px;
+    box-sizing:border-box;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    right: 70px;
+    z-index: 9;
+    line-height: 70px;
+    background: #161616;
+    display: none;
+}
+.input-search {
+    width: 88%;
+    height: 30px;
+    padding: 3px 3px 3px 26px;
+    box-sizing:border-box;
+    outline-style: none;
+    border: none;
+    line-height: 30px;
+    font-size: 1.2em;
+    background: url(../img/icon/icon-search.png) no-repeat 9px 10px/12px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.search-cancel-btn {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+
+
 
 /* key-visual轮播图 */
 .key-visual{
@@ -147,13 +221,13 @@ h2{
 	display: inline-block;
 	width: 10px;
 	height: 10px;
-	border: 1px solid #eee;
+	border: 1px solid #bbb;
 	margin: 0 4px;
 	border-radius: 100%;
 	cursor: pointer;
 }
 .slide-container .slide-btns span.active{
-	background-color:#eee;
+	background-color:#bbb;
 }
 .slide-container a{
 	display: block;
@@ -169,11 +243,11 @@ h2{
 }
 .slide-container .btn-prev{
 	left: 10px;
-    background: url(../img/left_arrow.svg?v=1) no-repeat;
+    background: url(../img/icon/left_arrow.svg?v=1) no-repeat;
 }	
 .slide-container .btn-next{
 	right: 10px;
-    background: url(../img/right_arrow.svg?v=1) no-repeat;
+    background: url(../img/icon/right_arrow.svg?v=1) no-repeat;
 }
 .slide-container:hover a,.slide-container:hover span{
 	opacity: 1;
@@ -231,6 +305,15 @@ h2{
 	overflow:hidden;
 	height: 275px;
 	position: relative;
+}
+/*.section1 .img-style:hover{
+	transform: scale(1.2);
+	transition: all .8s;
+	z-index: 9;
+}*/
+.section1 .img-style:hover img{
+	transform: scale(1.2);
+	transition: all .8s;
 }
 .section1 .img-style dl{
 	position: absolute;
@@ -301,6 +384,10 @@ h2{
 	margin: 0 1%;
 	overflow:hidden;
 	background: #fff;
+}
+.section-style2 ul li:hover .p-name{
+	transform: translate(0,-31px);
+	transition: all 0.5s;
 }
 .section-style2 ul li .p-img{
 	height: 425px;
@@ -502,7 +589,3 @@ h2{
 
 /* 小屏幕（平板，大于等于 768px） */
 @media (max-width: 992px) {  }
-
-
-/* 超小屏幕（手机，小于 768px） */
-@media (max-width: 768px) {  }

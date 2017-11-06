@@ -35,7 +35,7 @@ slide_container.find(".slide-btns span").click(function() {
 
 function slide(currentIndex){
 	
-	console.log(currentIndex);
+	// console.log(currentIndex);
 	// 设置当前按钮背景色
 	slide_container.find(".slide-btns span").removeClass('active');
 	slide_container.find(".slide-btns span").eq(currentIndex).addClass('active');
@@ -109,6 +109,34 @@ function slideAnimation() {
 
 
 $(function () {	
+	/* mobile toggle开关菜单*/
+	var clickCount = 0;
+	$('.menu-mobile .menu-icon').click(function(event) {
+		clickCount ++;
+		if(clickCount % 2 == 0){
+			$('.menu-mobile .menu-box').slideUp('slow');
+			$('.mask-section').css({
+				"background-color":"rgba(0,0,0,0.8)"
+			}).slideUp('slow')
+
+		}else{
+			$('.menu-mobile .menu-box').slideDown('slow');
+			$('.mask-section').css({
+				"background-color":"rgba(0,0,0,0.8)"
+			}).slideDown('slow');
+		}
+		
+	});
+	//搜索
+	$('.search-wrap').click(function(event) {
+		$('.search-container').show();
+		$('.mask-section').show();
+	});
+	// 取消搜索
+	$('.search-cancel-btn').click(function(event) {
+		$('.search-container').hide();
+		$('.mask-section').hide();
+	});
 })
 
 
