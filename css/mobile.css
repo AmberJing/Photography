@@ -1,9 +1,23 @@
+
+/* 大屏幕（大桌面显示器，小于等于 1200px） */
+@media (max-width: 1200px) { 
+  .slide-container .slide-main .img-item img{
+    width: 1200px;
+    margin-left: -600px;
+  }
+}
+
+
+/* 中等屏幕（桌面显示器，小于等于 992px） */
+@media (max-width: 992px) {  }
+
+
 /* 超小屏幕（手机，小于 768px） */
 @media (max-width: 768px) { 
   /* common.css */
   .forPC{display: none;}
   .forMob{display: block;}
-  /*遮罩*/
+  /*遮罩层*/
   .mask-section{
     width: 100%;
     height: 100%;
@@ -60,8 +74,6 @@
   .menu-mobile ul.sub-menu a{
     padding-left: 80px; 
   }
-
-
   /* 搜索 & 用户中心 */
   .nav-container .search-wrap,.nav-container .user-center{
     width: 35px;
@@ -72,7 +84,7 @@
   }
   .nav-container .search-wrap{right: 40px;}
   .nav-container .user-center{right: 5px;}
-
+  /* 搜索框 */
   .search-container{
     width: 100%;
     height: 60px;
@@ -81,5 +93,31 @@
     line-height: 60px;
     background: #282828;
   }
-  
+
+  /* key-visual轮播图 */
+  .slide-container .slide-main .img-item img{
+    width: 1000px;
+    margin-left: -500px;
+  }
+  .key-visual .slide-txt p{
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+
+  /* 内容主体部分 */
+  .section-text h2{font-size: 1.5em;}
+  .section1 .img-style{
+    width: 45%;
+    height: 200px;
+    margin: 10px;
+  }
+  .section1 .img-style img {
+    width: auto;
+    height: 100%;
+  }
+  .section1 .item3 img{left: 0;}
+  .section1 .img-style dl{font-size: 1.5em;line-height: 1.5em;}
+  .section1 .item3 dl dt,.section1 .item6 dl dt{font-size: 1em;line-height: 1.2em;}
+  .section1 .img-style dl dt{margin-top: 45px;}
+  .section1 .img-style dl dd{font-size: 1em;}
 }

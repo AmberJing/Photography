@@ -7,7 +7,7 @@ var imgCount = slide_container.find('.img-item').length;	// 计算图片数量
 var currentIndex = 0;	//当前索引
 var timer = undefined; 	//定时器对象
 
-slide_container.height(imgHeight);
+//slide_container.height(imgHeight);
 // 除第一张外都隐藏
 slide_container.find(".img-item:gt(0)").css("display","none");
 
