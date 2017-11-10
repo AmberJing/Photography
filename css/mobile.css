@@ -1,9 +1,14 @@
-
+@media (max-width: 1600px) { 
+  .slide-container .slide-main .img-item img{
+    width: 1600px;
+    margin-left: -800px;
+  }
+}
 /* 大屏幕（大桌面显示器，小于等于 1200px） */
 @media (max-width: 1200px) { 
   .slide-container .slide-main .img-item img{
-    width: 1200px;
-    margin-left: -600px;
+    width: 1400px;
+    margin-left: -700px;
   }
 }
 
@@ -49,7 +54,7 @@
     line-height: 60px;
   }
   .menu-mobile a.menu-icon span{
-    font-size: 1.8em;
+    font-size: 2em;
     color: #fff;
     vertical-align: middle;
   }
@@ -79,7 +84,10 @@
     width: 35px;
     line-height: 60px;
   }
-  .nav-container .search-wrap i,.nav-container .user-center i{
+  .nav-container .search-wrap i{
+    font-size: 2.5em;
+  }
+  .nav-container .user-center i{
     font-size: 1.8em;
   }
   .nav-container .search-wrap{right: 40px;}

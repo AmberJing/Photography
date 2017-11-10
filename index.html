@@ -11,8 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<!-- 引入Font Awesome -->
-	<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<!-- 引入icomoon -->
+	<link rel="stylesheet" href="css/icomoon/icomoon.css">
 	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -48,7 +48,7 @@
 			<!-- 导航菜单（mobile版） -->
 			<div class="menu menu-mobile forMob">
 				<a class="menu-icon">
-					<span class="fa fa-bars"></span>
+					<span class="icon-three-bars"></span>
 				</a>
 				<ul class="menu-box">
 					<li class="active"><a href="">首页</a></li>
@@ -71,7 +71,7 @@
 			
 			<!-- 搜索 -->
 			<div class="search-wrap">
-				<i class="fa fa-search"></i>
+				<i class="icon-search"></i>
 			</div>
 			<div class="search-container">
 				<input id="searchKeyword" type="input" class="input-search" placeholder="搜索" >
@@ -81,7 +81,7 @@
 			<div class="user-center">
 				<!-- 未登录 -->
 				<div class="login">
-					<a href="login.html"><i class="fa fa-user-o"></i></a>
+					<a href="login.html"><i class="icon-user-o"></i></a>
 				</div>
 
 				<!-- 已登录 -->
@@ -120,90 +120,57 @@
 			<a href="javascript:;" class="btn-next"></a>
 		</div><!-- 轮播容器 End -->
 	</div><!-- 广告轮播图 End -->
+	
+	<div class="adv">
+		<div class="adv-container">
+			<img src="img/gv_r1_c1.jpg">
+			<img src="img/gv_r1_c3.jpg">
+			<img src="img/gv_r1_c5.jpg">
+		</div>
+	</div>
 
-	<!-- <div class="mid-nav">
-		<ul>
-			<li><a href="#">个人写真</a></li>
-			<li><a href="#">婚纱摄影</a></li>
-			<li><a href="#">全家福拍摄</a></li>
-			<li><a href="#">宝贝计划</a></li>
-		</ul>
-	</div> -->
-
-	<!-- section1：最新活动 start -->
-	<div class="section section1">
+	<!-- section1：最新作品 start -->
+	 <div class="section newwork-section section1">
 		<div class="container">
 			<div class="section-text">
-				<h2><span>ACTIVITY</span> 最新活动</h2>
+				<h2><span>ACTIVITY</span> 最新作品</h2>
 				<p>I love three things in this world. Sun, moon and you. Sun for morning, moon for night , and you forever.</p>
 			</div>
 			<div class="section-main">
 				<div class="img-style item1">
-					<dl>
-					   <dt>幸福瞬间</dt>
-					   <dd>a moment of bliss</dd>
-					</dl>
+					
 					<img src="img/blo1.jpg">
 				</div>
 				<div class="img-style item2">
-					<dl>
-					   <dt>婚纱摄影</dt>
-					   <dd>wedding photo</dd>
-					</dl>
+					
 					<img src="img/blo10.jpg">
 				</div>
 				<div class="img-style item3">
-					<dl>
-					   <dt>关于我们</dt>
-					   <dd>about us</dd>
-					</dl>
+					
 					<img src="img/blo11.jpeg">
 				</div>
 				<div class="img-style item4">
-					<dl>
-					   <dt>优质服务</dt>
-					   <dd>knight sarvice</dd>
-					</dl>
+					
 					<img src="img/blo12.jpeg">
 				</div>
 				<div class="img-style item5">
-					<dl>
-					   <dt>产品推荐</dt>
-					   <dd>our product</dd>
-					</dl>
+					
 					<img src="img/blo15.jpg">
 				</div>
 				<div class="img-style item6">
-					<dl>
-					   <dt>联系我们</dt>
-					   <dd>connect us</dd>
-					</dl>
+					
 					<img src="img/blo16.jpg">
 				</div>
 			</div>
 		</div>
-	</div><!-- section1：最新活动 End -->
-
-	<div class="section banner1">
-		<div class="container">
-			<div class="section-text2">
-				<h2>
-					婚礼摄影<br>
-					<span>wedding photography</span>
-				</h2>
-				<span>4666<i>元</i></span>
-				<p>提供户外特色风景</p>
-				<p>专业团队为您保驾护航</p>
-				<a href="#" class="learn-more">查看更多</a>
-			</div>
-		</div>
 	</div>
+	<!-- section1：最新作品 End -->
 	
-	<!-- section2: 婚纱摄影 start -->
-	<div class="section section2 section-style2">
+	<!-- section2: 最热作品 start -->
+	<div class="section hotwork-section section2 section-style2">
 		<div class="container">
 			<div class="section-text">
-				<h2><span>WEDDING</span> 婚纱摄影</h2>
+				<h2><span>WEDDING</span> 最热作品</h2>
 				<p>My heart beats for you every day. I am inspired by you every minute, and I worry about you every second. It is wonderful to have you in my life.</p>
 			</div>
 			<div class="section-main">
@@ -287,118 +254,13 @@
 				</ul>
 			</div>
 		</div>
-	</div><!-- section2：婚纱摄影 End -->
+	</div><!-- section2：最热作品 End -->
 
-	<div class="section banner2">
-		<div class="container">
-			<div class="section-text2">
-				<h2>
-					个人摄影<br>
-					<span>personal photography</span>
-				</h2>
-				<span>1999<i>元</i></span>
-				<p>提供户外特色风景</p>
-				<p>专业团队为您保驾护航</p>
-				<a href="#" class="learn-more">查看更多</a>
-			</div>
-		</div>
-	</div>
-
-	<!-- section3: 个人写真摄影 start -->
-	<div class="section section3 section-style2">
-		<div class="container">
-			<div class="section-text">
-				<h2><span>PERSONAL</span> 个人写真摄影</h2>
-				<p>My heart beats for you every day. I am inspired by you every minute, and I worry about you every second. It is wonderful to have you in my life.</p>
-			</div>
-			<div class="section-main">
-				<ul class="product-wed-list">
-					<li>
-						<div class="p-img">
-							<a href="#">
-								<img src="img/20170802163806625.jpg">	
-							</a>
-							<p class='p-name'>
-								<a class="titleSet" href="#" target="_self">森林式婚纱照</a>
-							</p>
-						</div>
-						<div class="product-info">
-							<div class="p-price">
-								<span class="p-text">现售价</span>
-								<span class="p-value">￥6888</span>
-							</div>
-							<div class="p-button">
-								<a class="btnaSet" href="javascript:addcart(136558,0,0);" target="_self"><i></i>立即抢购</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="p-img">
-							<a href="#">
-								<img src="img/20170802163806483.jpg">	
-							</a>
-							<p class='p-name'>
-								<a class="titleSet" href="#" target="_self">森林式婚纱照</a>
-							</p>
-						</div>
-						<div class="product-info">
-							<div class="p-price">
-								<span class="p-text">现售价</span>
-								<span class="p-value">￥6888</span>
-							</div>
-							<div class="p-button">
-								<a class="btnaSet" href="javascript:addcart(136558,0,0);" target="_self"><i></i>立即抢购</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="p-img">
-							<a href="#">
-								<img src="img/20170802163806602.jpg">	
-							</a>
-							<p class='p-name'>
-								<a class="titleSet" href="#" target="_self">森林式婚纱照</a>
-							</p>
-						</div>
-						<div class="product-info">
-							<div class="p-price">
-								<span class="p-text">现售价</span>
-								<span class="p-value">￥6888</span>
-							</div>
-							<div class="p-button">
-								<a class="btnaSet" href="javascript:addcart(136558,0,0);" target="_self"><i></i>立即抢购</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="p-img">
-							<a href="#">
-								<img src="img/20170802163806467.jpg">	
-							</a>
-							<p class='p-name'>
-								<a class="titleSet" href="#" target="_self">森林式婚纱照</a>
-							</p>
-						</div>
-						<div class="product-info">
-							<div class="p-price">
-								<span class="p-text">现售价</span>
-								<span class="p-value">￥6888</span>
-							</div>
-							<div class="p-button">
-								<a class="btnaSet" href="javascript:addcart(136558,0,0);" target="_self"><i></i>立即抢购</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div><!-- section3：个人写真摄影 End -->
-
-	<!-- section4: 精品合集 start -->
+	<!-- section4: 作品展 start -->
 	<div class="section section4 section-style2">
 		<div class="container">
 			<div class="section-text">
-				<h2><span>RECOMMENDED</span> 精品合集</h2>
+				<h2><span>RECOMMENDED</span> 作品展</h2>
 				<p>A man who truly loves you will never let you go, no matter how hard the situation is</p>
 			</div>
 			<div class="section-main">
@@ -493,40 +355,97 @@
 
 	<!-- footer导航 start -->
 	<div class="footer">
-		<div class="footer-container">
+		<div class="footer-main">
 			<dl class="contact">
-				<dt>联系方式</dt>
+				<dt>联系方式<i class="line"></i></dt>
 				<dd>
-					<p>电话：020-0012134571</p>
-					<p>Email：dinggehhh@mail.com</p>
-					<p>传真：020-0001214456</p>
-					<p>地址：广东省广州市横沥新区横沥工业区32栋A座位306室</p>
+					<p><i class="icon-phone"></i>电话：0411-12345678</p>
+					<p><i class="icon-envelop"></i>Email：dinggehhh@mail.com</p>
+					<p><i class="icon-printer"></i>传真：020-0001214456</p>
+					<p><i class="icon-location2"></i>地址：辽宁省大连市软件园3号楼4楼401室</p>
 				</dd>
 			</dl>
 			<dl class="introduction">
-				<dt>定格映画</dt>
+				<dt>定格映画<i class="line"></i></dt>
 				<dd>
 					我们坚持”质量第一、诚信为本、服务社会”的经营宗旨，以“市场为导向、安全为基石、质量为保证、客户为中心、发展为根本”的经营理念一直为社会各界提供优质诚信的服务。以真诚奉献来积极回鐀社会。树立良好的企业形象，取得了良好的经济效益及社会效益。我们坚信“服务创造价值”。愿与您协手共创未来！
 				</dd>
 			</dl>
-			<dl class="navigation">
-				<dt>导航栏</dt>
+			<dl class="about">
+				<dt>关注我们<i class="line"></i></dt>
 				<dd>
-					<ul>
-						<li><a href="index.html">首页</a></li>
-						<li><a href="all_product.html">全部产品</a></li>
-						<li><a href="aboutG.html">精品摄影</a></li>
-						<li><a href="about.html">关于我们</a></li>
-						<li><a href="contactUs.html">联系我们</a></li>
-					</ul>
+					<p>扫描二维码，我们会以最快的速度告诉金融、市场、股票等领域的最新资讯。</p>
+					<div class="qrcode">
+						<img src="img/mobile-qrcode.jpg" alt="手机版二维码">
+						<span>手机版</span>
+					</div>
+					<div class="qrcode"> 
+						<img src="img/weixin-qrcode.jpg" alt="微信公众号二维码">
+						<span>微信公众号</span>
+					</div>
 				</dd>
 			</dl>
-			<div class="copyright">京ICP备10214630 Copyright © 2017 定格映画 Inc. - 保留所有权利。</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="copyright"><p>京ICP备10214630 Copyright © 2017 定格映画 Inc. - 保留所有权利。</p></div>
+			<div class="footer-menu">
+                <a class="" href="index.html">首页</a>					 
+                <a class="" href="yuding.html">预订</a>
+                <a class="" href="service.html">服务</a>					 	 
+                <a class="" href="about.html">关于</a>
+                <a class="" href="contact.html">联系</a>
+			</div>	
 		</div>
 	</div><!-- footer导航 End -->
+	<!-- 侧边工具栏 -->
+	<div class="sidebar-menu">
+		<a href="javascript:;" class="sidebar-item sidebar-item-feedback"></a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-weixin">
+			<span class="sidebar-layer"></span>
+		</a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-app">
+			<span class="sidebar-layer"></span>
+		</a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-top"></a>
+	</div><!-- 侧边工具栏 End -->
+	
+	<!-- <link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/vicons/vicons-font.css" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<div class="menu toolbar">
+		<div class="menu-wrapper">
+			<ul class="menu-items">
+				<li class="menu-item">
+					<button class="menu-item-button">
+						<i class="menu-item-icon icon icon-weixin"></i>
+					</button>
+					<div class="menu-item-bounce"></div>
+				</li>
+				<li class="menu-item">
+					<button class="menu-item-button">
+						<i class="menu-item-icon icon icon-weibo"></i>
+					</button>
+					<div class="menu-item-bounce"></div>
+				</li>
+				<li class="menu-item">
+					<button class="menu-item-button">
+						<i class="menu-item-icon icon icon-wechat"></i>
+					</button>
+					<div class="menu-item-bounce"></div>
+				</li>
+			</ul>
+			<button class="menu-toggle-button">
+				<i class="fa fa-plus menu-toggle-icon"></i>
+			</button>
+		</div>
+	</div> -->
 
 	<!-- 引入js -->
 	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+	<!--<script src="js/TweenMax.min.js"></script>
+	<script src="js/menu.js"></script>-->
 </body>
 </html>
