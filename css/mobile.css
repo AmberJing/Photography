@@ -112,6 +112,12 @@
     line-height: 1.2em;
   }
 
+  /* 广告 & 精品活动 */
+  .adv .adv-container .adv-item{
+    width: 48%;
+    margin: 1% 1%;
+  }
+
   /* 内容主体部分 */
   .section-text h2{font-size: 1.5em;}
   .section1 .img-style{
@@ -128,4 +134,22 @@
   .section1 .item3 dl dt,.section1 .item6 dl dt{font-size: 1em;line-height: 1.2em;}
   .section1 .img-style dl dt{margin-top: 45px;}
   .section1 .img-style dl dd{font-size: 1em;}
+
+  /*最热作品*/
+  .hotwork-section ul.hotwork-list li{
+    width: 48%;
+    margin: 1% 1%;
+  }
+}
+
+@media (max-width: 480px) { 
+  /* 广告 & 精品活动 */
+  .adv .adv-container .adv-item{
+    width: 98%;
+    margin: 1% 1%;
+  }
+  .hotwork-section ul.hotwork-list li{
+    width: 98%;
+    margin: 1% 1%;
+  }
 }
