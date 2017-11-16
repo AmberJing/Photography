@@ -42,7 +42,6 @@
 
 /* 中等屏幕（桌面显示器，小于等于 992px） */
 @media (max-width: 992px) { 
-  
 }
 
 
@@ -157,11 +156,12 @@
   }
   .brand_content  .long-img{
     float: none;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
   }
   .brand_content .list_img{
     float: none;
+    width: 89%;
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -186,7 +186,7 @@
 
   /*footer*/
   .footer{
-    padding: 0px;
+    padding: 10px 0;
   }
   .footer-bottom{
     margin: 0;
@@ -201,8 +201,8 @@
 @media (max-width: 480px) { 
   /* 广告 & 精品活动 */
   .adv .adv-container .adv-item{
-    width: 98%;
-    margin: 1% 1%;
+    width: 90%;
+    margin: 2% 5%;
   }
   /* 最新作品 */
   /*.brand_content  .long-img{
@@ -216,11 +216,7 @@
     margin-top: 20px;
   }
   .brand_content .list_img ul{padding: 0;}
-  .brand_content .list_img ul li{
-    width: 98%;
-    /*height: 300px;*/
-    margin: 1% 0.5%;
-  }
+
   .hotwork-section ul.hotwork-list li{
     width: 98%;
     margin: 1% 1%;

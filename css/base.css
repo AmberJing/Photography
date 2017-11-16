@@ -1,3 +1,236 @@
+/*提供css reset功能和和通用原子类*/
+
+/* CSS reset */
+/*body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h3,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+}
+fieldset,img {
+    border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;font-weight:normal;
+}
+q:before,q:after {
+    content:''
+}
+abbr,acronym {
+    border:0
+}*/
+
+
+/* normalize.css */
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+body {
+  margin: 0
+}
+article, aside, footer, header, nav, section {
+  display: block
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0
+}
+figcaption, figure, main {
+  display: block
+}
+figure {
+  margin: 1em 40px
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+b, strong {
+  font-weight: inherit
+}
+b, strong {
+  font-weight: bolder
+}
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+dfn {
+  font-style: italic
+}
+mark {
+  background-color: #ff0;
+  color: #000
+}
+small {
+  font-size: 80%
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+sub {
+  bottom: -0.25em
+}
+sup {
+  top: -0.5em
+}
+audio, video {
+  display: inline-block
+}
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+img {
+  border-style: none
+}
+svg:not(:root) {
+  overflow: hidden
+}
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+button, input {
+  overflow: visible
+}
+button, select {
+  text-transform: none
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button
+}
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline
+}
+textarea {
+  overflow: auto
+}
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  padding: 0
+}
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+details, menu {
+  display: block
+}
+summary {
+  display: list-item
+}
+canvas {
+  display: inline-block
+}
+template {
+  display: none
+}
+[hidden] {
+  display: none
+}
+
+dl,dt,dd{margin: 0;}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* 通用原子类 */
+.forPC{display: block;}
+.forMob{display: none;}
+.clearfix:after {
+	content:'';
+	display: block;
+	clear: both;
+}
+/*.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f20{font-size:20px;}
+
+.tl{text-align:left}
+.tc{text-aligh:center}
+.tr{text-aligh:right}
+.fl{float:left;display:inline}
+.fr{float:left;display:inline}
+
+.w10{width:10px}
+.w20{width:20px}
+.w40{width:40px}
+.w60{width:60px}
+.w80{width:80px}
+.h50{height:50px}
+.h80{height:80px}
+.h100{height:100px}
+.h200{height:200px}
+
+.m10{margin:10px;}
+.mt10{margin-top:10px;}
+.ml10{margin-right:10px;}
+.p10{padding:10px;}
+.pt10{padding-top:10px;}
+.pl10{padding-left:10px;}
+
 @font-face {
 	font-weight: normal;
 	font-style: normal;
@@ -65,7 +298,7 @@ button:focus {
 	font-weight: 600;
 }
 
-/* Header */
+
 .codrops-header {
 	padding: 2em 0 4em;
 	letter-spacing: -1px;
@@ -141,7 +374,7 @@ button:focus {
 	content: "\e004";
 }
 
-/* Demo links */
+
 .codrops-demos a {
 	display: inline-block;
 	text-transform: uppercase;
@@ -153,7 +386,7 @@ button:focus {
 	border-radius: 2px;
 }
 
-/* Related demos */
+
 .content--related {
 	text-align: center;
 	font-weight: 400;
@@ -187,7 +420,7 @@ button:focus {
 	font-weight: 400;
 }
 
-/* Demo color */
+
 .demo-2 { background: #4D4D52; }
 .demo-2 a:hover, 
 .demo-2 a:focus,
@@ -267,4 +500,4 @@ button:focus {
 	.codrops-header h1 {
 		font-size: 2.8em;
 	}
-}
+}*/

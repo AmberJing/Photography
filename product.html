@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>定格映画</title>
+	<link rel="shortcut icon" href="img/camera.png">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/subpage.css">
+
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	
+	<!-- 引入icomoon -->
+	<link rel="stylesheet" href="css/icomoon/icomoon.css">
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- header导航 start -->
+	<div class="header-nav">
+		<div class="nav-container">
+			<!-- logo 图 -->
+			<div class="logo-wrap animated swing">
+				<a href="index.html">
+					<img class="forPC" src="img/logo-mobile.png" alt="LOGO" >  
+					<img class="forMob" src="img/logo-mobile1.png" alt="LOGO" >
+				</a> 
+			</div><!-- logo图 End -->
+
+			<!-- 导航菜单（pc版） -->
+			<div class="menu menu-desktop forPC">
+				<ul class="menu-box">
+					<li><a href="index.html">首页</a></li>
+					<li class="active">
+						<a href="product.html">全部产品</a>
+						<ul class="sub-menu">
+							<li><a href="#">人物摄影</a></li>
+							<li><a href="#">风景摄影</a></li>
+						</ul>
+					</li>
+					<li><a href="">精品摄影</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>	
+			</div><!-- 导航菜单 End -->
+
+			<!-- 导航菜单（mobile版） -->
+			<div class="menu menu-mobile forMob">
+				<a class="menu-icon">
+					<span class="icon-three-bars"></span>
+				</a>
+				<ul class="menu-box">
+					<li><a href="index.html">首页</a></li>
+					<li class="active">
+						<a href="product.html">全部产品</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#">人物摄影</a>
+							</li>
+							<li>
+								<a href="#">风景摄影</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="">精品摄影</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>	
+			</div><!-- 导航菜单 End -->
+			
+			<!-- 搜索 -->
+			<div class="search-wrap">
+				<i class="icon-search"></i>
+			</div>
+			<div class="search-container">
+				<input id="searchKeyword" type="input" class="input-search" placeholder="搜索" >
+				<a href="javascript:void(0);" class="search-cancel-btn">取消</a>
+			</div>
+			<!-- 用户中心 -->
+			<div class="user-center">
+				<!-- 未登录 -->
+				<div class="login">
+					<a href="login.html"><i class="icon-user-o"></i></a>
+				</div>
+
+				<!-- 已登录 -->
+				<!-- <ul class="unlogin">
+						<i class="user-icon"></i>
+						<li>交易记录</li>
+						<li>个人资料</li>
+					头像、消息。。。
+				</ul> -->
+			</div>
+		</div><!-- nav-container End -->
+	</div><!-- header导航 End -->
+
+	<!-- 焦点轮播图 start -->
+	<div class="key-visual">
+		<div class="slide-txt">
+			<p class="animated fadeInDown">以独特方式看世界</p>
+			<p>用相片记录瞬间</p>
+			<p class="animated fadeInUp">让记忆定格这一秒</p>
+		</div>
+		<!-- 轮播容器 start -->
+		<div class="slide-container">
+			<div class="slide-main">
+				<div class="img-item">
+					<img src="img/banner-product2.jpg" alt="">
+				</div>
+			</div>
+		</div><!-- 轮播容器 End -->
+	</div><!-- 焦点轮播图 End -->
+
+	<!-- 内容展示区 开始 -->
+	<div id="show">
+		<div class="show_content" style="min-height:1000px;">
+			<div class="show_icon"></div>
+			<div class="show_icon"></div>
+			<div class="show_icon"></div>
+			<div class="show_icon"></div>
+		</div>
+
+	</div>
+	<!-- 内容展示区 结束 -->
+
+	<!-- 加载更多 开始 -->
+	<div id="loading">
+		<a href="javascript:void(0);" class="btn">
+			加载更多
+			<div class="img" style="display:none;">
+				<img src="img/loader.gif" alt="">
+			</div>
+		</a>
+	</div>
+	<!-- 加载更多 结束 -->
+
+
+	<!-- footer导航 start -->
+	<div class="footer">
+		<div class="footer-main clearfix">
+			<dl class="contact forPC">
+				<dt>联系方式<i class="line"></i></dt>
+				<dd>
+					<p><i class="icon-phone"></i>电话：0411-12345678</p>
+					<p><i class="icon-envelop"></i>Email：dinggehhh@mail.com</p>
+					<p><i class="icon-printer"></i>传真：020-0001214456</p>
+					<p><i class="icon-location2"></i>地址：辽宁省大连市软件园3号楼4楼401室</p>
+				</dd>
+			</dl>
+			<dl class="introduction forPC">
+				<dt>定格映画<i class="line"></i></dt>
+				<dd>
+					我们坚持”质量第一、诚信为本、服务社会”的经营宗旨，以“市场为导向、安全为基石、质量为保证、客户为中心、发展为根本”的经营理念一直为社会各界提供优质诚信的服务。以真诚奉献来积极回鐀社会。树立良好的企业形象，取得了良好的经济效益及社会效益。我们坚信“服务创造价值”。愿与您协手共创未来！
+				</dd>
+			</dl>
+			<dl class="about forPC">
+				<dt>关注我们<i class="line"></i></dt>
+				<dd>
+					<p>扫描二维码，我们会以最快的速度告诉金融、市场、股票等领域的最新资讯。</p>
+					<div class="qrcode">
+						<img src="img/mobile-qrcode.jpg" alt="手机版二维码">
+						<span>手机版</span>
+					</div>
+					<div class="qrcode"> 
+						<img src="img/weixin-qrcode.jpg" alt="微信公众号二维码">
+						<span>微信公众号</span>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="footer-bottom clearfix">
+			<div class="copyright"><p>京ICP备10214630 Copyright © 2017 定格映画 Inc. - 保留所有权利。</p></div>
+			<div class="footer-menu forPC">
+                <a class="" href="index.html">首页</a>					 
+                <a class="" href="yuding.html">预订</a>
+                <a class="" href="service.html">服务</a>					 	 
+                <a class="" href="about.html">关于</a>
+                <a class="" href="contact.html">联系</a>
+			</div>	
+		</div>
+	</div><!-- footer导航 End -->
+	<!-- 侧边工具栏 -->
+	<div class="sidebar-menu">
+		<a href="javascript:;" class="sidebar-item sidebar-item-feedback"></a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-weixin">
+			<span class="sidebar-layer"></span>
+		</a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-app">
+			<span class="sidebar-layer"></span>
+		</a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-top"></a>
+	</div><!-- 侧边工具栏 End -->
+
+	<!-- 引入js -->
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/fenleilife.js"></script>
+	<script type="text/javascript" src="js/product-data.js"></script>
+</body>
+</html>

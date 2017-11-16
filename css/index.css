@@ -1,12 +1,6 @@
 /*先宽高，后定位，再字体相关*/
 /*common.css*/
-dl,dt,dd{margin: 0;}
-ul,li{
-	list-style: none;
-}
-a{
-	text-decoration: none;
-}
+
 body{
 	font: 12px/1.5 tahoma,arial,"Microsoft YaHei";
 	/*background: #161616;#f2f2f2*/
@@ -16,8 +10,6 @@ body{
 h2{
 	font-weight: normal;
 }
-.forPC{display: block;}
-.forMob{display: none;}
 
 
 .rain{
@@ -30,136 +22,6 @@ h2{
 	opacity: 0.5;
 }
 /*index.css*/
-
-/* 顶部导航条 */
-.header-nav{
-	width: 100%;
-	height: 70px;
-	background: #161616;
-}
-.header-nav .nav-container{
-	width: 1200px;
-	height: 100%;
-	margin: 0 auto;
-	position: relative;
-	z-index: 99;
-	/*或者
-		height: 100%;
-	    margin: 0 70px;
-	    position: relative;
-    */
-}
-
-/* logo图 */
-.nav-container .logo-wrap{
-	position: absolute;
-	top: 5px;
-	left: 0; 
-}
-.nav-container .logo-wrap img{
-	width: 170px;
-	height: 60px;
-}
-/* menu菜单 */
-.nav-container .menu-desktop{
-	height: 100%;
-	text-align: center;
-}
-.nav-container .menu-desktop ul.menu-box{/*ul.menu-box*/
-	height: 46px;/* 浏览器默认有margin:12px */
-    display: inline-block;/* 利用行内元素居中对齐*/
-}
-.menu-desktop ul li{/*多级menu样式通用*/
-	width: 140px;
-	height: 46px;
-	position: relative;
-	text-align:center;
-}
-.menu ul li a{
-	display: block;
-	margin: 0px 10px;
-	line-height: 46px;
-	font-size: 14px;
-	color: #fff;
-}
-.menu ul li:hover>a,.menu ul li.active>a{
-	background: #0068CA;
-	color: #fff;
-}
-/*一级菜单(横向排列)*/
-.menu-desktop ul.menu-box>li{
-	float: left;
-}
-.menu-desktop ul li:hover ul{
-	display: block;
-}
-/*二级菜单*(纵向排列)*/
-.menu-desktop ul li ul{
-	position: absolute;
-	left: -40px;
-	z-index: 99;
-	display: none;
-}
-.menu-desktop ul li ul>li{
-	margin: 8px 0px;
-}
-.menu-desktop ul li ul li a{
-	background: #fff;
-	color: #0068CA;
-}
-/* 搜索 & 用户中心 */
-.nav-container .search-wrap,.nav-container .user-center{
-	width: 70px;
-	height: 100%;
-	position: absolute;
-	top: 0; 
-	right: 0;/* 搜索 */
-	text-align: center;
-	line-height: 70px;
-}
-.nav-container .search-wrap i,.nav-container .user-center i{
-	font-style: normal;
-    color: #fff;
-    vertical-align: middle;
-}
-.nav-container .search-wrap i{font-size: 38px;}
-.nav-container .user-center i{font-size: 27px;}
-.nav-container .search-wrap{right: 70px;}
-/* 搜索框 */
-.search-container{
-    height: 70px;
-    padding: 0 10px;
-    box-sizing:border-box;
-    position: absolute;
-    top: 0;
-    left: 200px;
-    right: 70px;
-    z-index: 9;
-    line-height: 70px;
-    background: #161616;
-    display: none;
-}
-.input-search {
-    width: 88%;
-    height: 30px;
-    padding: 3px 3px 3px 26px;
-    box-sizing:border-box;
-    outline-style: none;
-    border: none;
-    line-height: 30px;
-    font-size: 1.2em;
-    background: url(../img/icon/icon-search.png) no-repeat 9px 10px/12px;
-    background-color: #fff;
-    border-radius: 3px;
-}
-.search-cancel-btn {
-    display: inline-block;
-    width: 10%;
-    text-align: center;
-    line-height: 30px;
-    font-size: 1.2em;
-    color: #fff;
-}
 
 /* key-visual轮播图 */
 .key-visual{
@@ -189,7 +51,7 @@ h2{
 /*轮播图片*/
 .slide-container .slide-main .img-item{
 	width: 100%;
-	overflow:hidden;
+	/*overflow:hidden;*/
 	display: none;
 }
 .slide-container .slide-main .img-item:nth-child(1){
@@ -258,7 +120,6 @@ h2{
 .adv .adv-container{
 	max-width: 1200px;
 	margin: 0 auto;
-	overflow: hidden;
 }
 .adv .adv-container .adv-item{
 	width: 23%;
@@ -292,7 +153,7 @@ h2{
 }
 .adv .adv-container .adv-item .adv-desc p{
 	width: 80%;
-	margin: 50px auto 0;
+	margin: 20% auto 0;
     padding: 12px 0;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
@@ -362,13 +223,9 @@ h2{
 .section-text p{
 	color: #9b9b9b;
 }
-.section .section-main{
-	overflow: hidden;
-}
 /* section1 ACTIVITY 最新活动*/
 
 .brand_content{
-	overflow: hidden;
 	padding: 20px 0;
 	height: 500px;
 }
@@ -388,7 +245,6 @@ h2{
 	width:75%;
 	height: 100%;
 	float:right;
-	/*overflow: hidden;*/
 }
 
 .brand_content .list_img ul {
@@ -488,7 +344,6 @@ h2{
 }
 .hotwork-section .work-tabs > ul{
 	display: inline-block;
-	overflow: hidden;
 }
 .hotwork-section .work-tabs > ul > li{
 	float: left;
@@ -506,7 +361,6 @@ h2{
 .hotwork-section ul.hotwork-list{
 	padding: 0;
 	background: #fff;
-	overflow: hidden;
 }
 .hotwork-section ul.hotwork-list li{
 	width: 25%;
@@ -554,7 +408,6 @@ h2{
 
 /*section3:优秀摄影师*/
 .workstar-section .workstar-list{
-	overflow: hidden;
 	width: 85%;
 	margin: 0 auto;
 	padding: 40px 20px;
@@ -696,176 +549,3 @@ h2{
 	top: 35px;
 }
 
-/* footer */
-.footer{
-	background: #262626;
-	padding: 60px 0 10px;
-	/*background: url(../img/20170802172716468.jpg) no-repeat;
-    background-size: 100% auto;
-    background-position-y: 0%;*/
-}
-.footer-main{
-	max-width: 1200px;
-	margin: 0 auto;
-	overflow: hidden;
-}
-.footer-main dl{
-	width: 30%;
-	padding-right: 5%;
-	float: left;
-	color: #bfbfbf;
-}
-.footer-main dl:nth-child(3){
-	box-sizing: border-box;
-}
-.footer-main dl dt{
-	position: relative;
-	font-size: 20px;
-	line-height: 60px;
-	letter-spacing: 2px;
-	color: #fff;
-}
-.footer-main dl dt i.line{
-	width: 50px;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	border-bottom: 3px solid #0068CA;
-}
-.footer-main dl dd{
-	margin-top: 20px;
-	font-size: 14px;
-	line-height: 30px;
-}
-.footer-main dl.contact dd{
-	text-indent: 1em;
-}
-.footer-main dl.introduction dd{
-	text-indent: 2em;
-	text-align: justify;
-}
-.footer-main dl dd p{
-	margin: 10px 0;
-	letter-spacing: 1px;
-}
-.footer-main dl dd p i{
-	padding-right: 8px;
-	font-size: 22px;
-	color: #0068CA;
-	vertical-align: middle;
-}
-.footer-main dl dd .qrcode{
-	width: 50%;
-	float: left;
-	text-align: center;
-}
-.footer-main dl dd .qrcode img{
-	width: 100px;
-	height: 100px;
-}
-.footer-main dl dd .qrcode span{
-	display: block;
-	letter-spacing: 1px;
-}
-.footer-bottom{
-	max-width: 1200px;
-	margin: 40px auto 0;
-	color: #bfbfbf;
-	border-top: 1px solid #0068CA;
-	overflow: hidden;
-}
-.footer-bottom .copyright{
-	font-size: 14px;
-	float: left;
-}
-.footer-bottom .footer-menu{
-	float: right;
-	padding: 14px 0;
-}
-.footer-bottom .footer-menu a{
-	font-size: 14px;
-	color: #bfbfbf;
-	padding: 0 10px;
-}
-.sidebar-menu{
-	position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 99;
-}
-.sidebar-item {
-    display: block;
-    width: 52px;
-    height: 52px;
-    background: url(../img/toolbar.png) no-repeat;
-    margin-top: 1px;
-    position: relative;
-    background-color: #ccc;
-}
-/* 意见反馈 */
-.sidebar-item-feedback{
-	background-position: 0 -426px;
-	transition: all 0.5s;
-}
-.sidebar-item-feedback:hover{
-	background-position: 0 -488px;
-}
-/* 微信 */
-.sidebar-item-weixin{
-	background-position: 0 -798px;
-	transition: all 0.5s;
-}
-.sidebar-item-weixin:hover{
-	background-position: 0 -860px;
-}
-/* App下载 */
-.sidebar-item-app{
-	background-position: 0 -550px;
-	transition: all 0.5s;
-}
-.sidebar-item-app:hover{
-	background-position: 0 -612px;
-}
-/* 返回顶部 */
-.sidebar-item-top{
-	background-position: 0 -674px;
-	/*transition: all 0.5s;注意：这里的css3的transition过渡，会与js加的animate动画冲突,可以加载：hover中*/
-}
-.sidebar-item-top:hover{
-	background-position: 0 -736px;
-	transition: all 0.5s;
-}
-
-/* 二维码弹出层统一设置 */
-.sidebar-layer{
-	position: absolute;
-	width: 172px;
-	right: 52px;
-	bottom: 0;
-	background:url(../img/toolbar.png) no-repeat;
-	opacity: 0;
-	filter: alpha(opacity=0);
-	transform: scale(0.01);
-	transform-origin: right bottom;/*设置变换原点为右下角*/
-	transition: all 0.5s;
-}
-
-/* 微信二维码弹出层 */
-.sidebar-item-weixin .sidebar-layer{
-	height: 212px;
-	background-position: 0 0;
-}
-/* app下载二维码弹出层 */
-.sidebar-item-app .sidebar-layer{
-	height: 194px;
-	background-position: 0 -222px;
-}
-.sidebar-item:hover .sidebar-layer{
-	opacity: 1;
-	filter: alpha(opacity=100);
-	transform: scale(1);
-}
-
-.toolbar{
-	position: fixed;
-}

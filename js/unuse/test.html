@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>下雨</title> 
+<style>
+body{ margin:0; padding:0; overflow:hidden; background-color:#7186d5;}
+div{ background-color:#fff; position:absolute;}
+</style>
+
+</head> 
+<body> 
+</body>
+
+</html> 
+
+<script type="text/javascript">
+  var x=window.screen.width;
+  var y=window.screen.height;
+  creatDiv();
+  
+  function creatDiv(){
+    var leftRandom = Math.round( Math.random() * x * 10 )/10 + "px";
+    var opacRandom = Math.round(Math.random()*10)/10;
+    var newDiv = document.createElement("div");
+    newDiv.style.top = "0";
+    newDiv.style.left = leftRandom;
+    newDiv.style.width = "2px";
+    newDiv.style.height = "10px";
+    newDiv.style.opacity = opacRandom;
+
+    document.body.appendChild(newDiv);
+
+    timer = setTimeout('getDiv()',10);//10ms后执行getDiv函数
+  } 
+
+
+
+function getDiv(){
+  //获取所有雨滴
+  var alldiv=document.getElementsByTagName("div");
+  console.log(alldiv.length)
+
+  for(i=0;i<alldiv.length;i++){
+    //  设置动画效果
+    alldiv[i].style.transition="all 3s";
+    alldiv[i].style.webkitTransition="all 3s";
+    alldiv[i].style.mozTransition="all s";
+    alldiv[i].style.transitionTimingFunction="ease-in";
+    alldiv[i].style.webkitTransitionTimingFunction="ease-in";
+    alldiv[i].style.mozTransitionTimingFunction="ease-in"
+    
+    //通过position的top值控制雨滴落下位置
+    alldiv[i].style.top = y + "px";
+    if(alldiv.length>150){
+         document.body.removeChild(alldiv[0]);
+      }
+    }
+    t=setTimeout('creatDiv()',1)
+  }
+  
+
+</script> 
