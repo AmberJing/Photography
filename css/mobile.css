@@ -10,11 +10,40 @@
     width: 1400px;
     margin-left: -700px;
   }
+  /* 最新作品 */
+  .brand_content{
+     height: 425px;
+  }
+  /*  优秀摄影师  */
+  .workstar-section .workstar-list{
+    width: 75%;
+  }
+  .hex:nth-child(12){
+    margin-left: 5px;
+  } 
+  .hex:nth-child(1),.hex:nth-child(10){
+    margin-left: 86px;
+  }
+  .hex:nth-child(14){
+    margin-left: 166px;
+  }
 }
 
+/*@media (max-width: 1100px) { 
+  .workstar-section .workstar-list{
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) { 
+  .workstar-section .workstar-list{
+    width: 85%;
+  }
+}*/
 
 /* 中等屏幕（桌面显示器，小于等于 992px） */
-@media (max-width: 992px) {  }
+@media (max-width: 992px) { 
+  
+}
 
 
 /* 超小屏幕（手机，小于 768px） */
@@ -120,25 +149,52 @@
 
   /* 内容主体部分 */
   .section-text h2{font-size: 1.5em;}
-  .section1 .img-style{
-    width: 45%;
-    height: 200px;
-    margin: 10px;
+  .section-text h2 span{width: 35%;}
+  
+  /* 最新作品 */
+  .brand_content{
+     height: auto;
   }
-  .section1 .img-style img {
-    width: auto;
-    height: 100%;
+  .brand_content  .long-img{
+    float: none;
+    width: 75%;
+    margin: 0 auto;
   }
-  .section1 .item3 img{left: 0;}
-  .section1 .img-style dl{font-size: 1.5em;line-height: 1.5em;}
-  .section1 .item3 dl dt,.section1 .item6 dl dt{font-size: 1em;line-height: 1.2em;}
-  .section1 .img-style dl dt{margin-top: 45px;}
-  .section1 .img-style dl dd{font-size: 1em;}
+  .brand_content .list_img{
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .brand_content .list_img ul{padding: 0;}
+  .brand_content .list_img ul li{
+    width: 48%;
+    height: 300px;
+    margin: 1% 0.5%;
+  }
 
   /*最热作品*/
   .hotwork-section ul.hotwork-list li{
     width: 48%;
     margin: 1% 1%;
+  }
+  /*优秀摄影师*/
+  .workstar-section .workstar-list{
+    width: 90%;
+  }
+  .workstar-list .hex{margin-left: 5px;}
+
+
+  /*footer*/
+  .footer{
+    padding: 0px;
+  }
+  .footer-bottom{
+    margin: 0;
+    border: none;
+  }
+  .footer-bottom .copyright{
+    float: none;
+    text-align: center;
   }
 }
 
@@ -148,8 +204,43 @@
     width: 98%;
     margin: 1% 1%;
   }
+  /* 最新作品 */
+  /*.brand_content  .long-img{
+    float: none;
+    width: 75%;
+    margin: 0 auto;
+  }*/
+  .brand_content .list_img{
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .brand_content .list_img ul{padding: 0;}
+  .brand_content .list_img ul li{
+    width: 98%;
+    /*height: 300px;*/
+    margin: 1% 0.5%;
+  }
   .hotwork-section ul.hotwork-list li{
     width: 98%;
     margin: 1% 1%;
+  }
+  .workstar-section .workstar-list{
+    width: 100%;
+    padding: 40px 10%;
+  }
+  
+}
+
+
+ /*优秀摄影师*/
+@media (max-width: 376px){
+  .workstar-section .workstar-list{
+    padding: 40px 7%;
+  }
+}
+@media (max-width: 320px){
+  .workstar-section .workstar-list{
+    padding: 40px 0;
   }
 }
