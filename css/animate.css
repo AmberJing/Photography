@@ -31,10 +31,10 @@
 
 @keyframes bounceDown {
   from {
-    bottom: 25px;
+    bottom: 20px;
   }
   to {
-    bottom: 15px;
+    bottom: 10px;
   }
 }
 

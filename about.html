@@ -16,109 +16,68 @@
 	<!-- 引入icomoon -->
 	<link rel="stylesheet" href="css/icomoon/icomoon.css">
 
-	<!-- 引入js -->
-	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 </head>
 <body>
+	<!-- header导航 start -->
 	<div id="x-div1"></div>
-    <script>
-    $.ajax({
-    	url:"index.html", 
-        type: "GET", //静态页用get方法，否则服务器会抛出405错误
-        dataType :"html", 
-        async: false,
-        success: function(data){    
-        	var start = data.indexOf('!-- header导航 start --') - 2;
-        	var stop = data.indexOf('!-- header导航 End --') + 18;
-            var result = $.trim(data.substring(start,stop));
-            $("#x-div1").html(result);
-        }
-    });
-    </script> 
+	<!-- header导航 End -->
+    
  	
  	<!-- 焦点KV图 start -->
-	<div class="key-visual">
+	<div class="key-visual about">
 		<div class="banner-txt">
 		</div>
 		<div class="banner-container">
-			<img src="img/about-banner.jpg" alt="">
+			<!-- <img src="img/banner-about.jpg" alt=""> -->
 		</div>
-		<div class="arrow-down animated bounceDown infinite" id="arrow"></div>
+		<!-- 面包屑导航 start -->
+		<div class="breadcrumb-nav">
+			<div class="nav-container">
+				<span>定格映画 › 关于我们</span>
+			</div>
+		</div><!-- 面包屑导航 End -->
+		<div class="arrow-down animated bounceDown infinite" id="scrollDown"></div>
 	</div><!-- 焦点KV图 End -->
-
-	<!-- 面包屑导航 start -->
-	<div class="breadcrumb-nav">
+	
+	<!-- 浮动导航 start -->
+	<div class="float-nav" id="floatNav">
 		<div class="nav-container">
-			<span>定格映画 › 关于我们</span>
+			<ul>
+				<li class="sec-aboutus on"><a href="#sec-aboutus">公司简介</a></li>
+				<li class="sec-whyus"><a href="#sec-whyus">公司理念</a></li>
+				<li class="sec-product"><a href="#sec-product">公司产品</a></li>
+				<li class="sec-ourteam"><a href="#sec-ourteam">团队成员</a></li>
+				<li class="sec-partner"><a href="#sec-partner">合作伙伴</a></li>
+			</ul>
 		</div>
-	</div><!-- 面包屑导航 End -->
+	</div><!-- 浮动导航 End -->
+
 	
 	<!-- 关于我们 start -->
-	<div class="section aboutus layout1">
+	<div class="section aboutus" id="sec-aboutus">
 		<div class="container">
-			<div class="section-text">
-				<h2>关于我们</h2>
-				<p><span class="icon-line"></span>About us<span></span></p>
+			<div class="about-set-info clearfix">
+				<dl>
+					<dt>2013</dt>
+					<dd>公司成立</dd>
+				</dl>
+				<dl>
+					<dt>850万+</dt>
+					<dd>共享+原创作品</dd>
+				</dl>
+				<dl>
+					<dt>2800万+</dt>
+					<dd>注册用户</dd>
+				</dl>
+				<dl>
+					<dt>200</dt>
+					<dd>国家和地区</dd>
+				</dl>
 			</div>
-			<div class="section-main clearfix">
-				<div class="left-content">
-					<img src="img/about-kv.jpg" alt="">
-				</div>
-				<div class="right-content">
-					<h2>定格映画</h2>
-					<p>
-					一家集品牌策划、电商策划、原创图案、标志设计、包装设计、产品摄影、微信营销、画册设计、海报设计为一体的综合性广告设计服务公司。由资深品牌营销策划设计团队组成，旨在为3C数码配件，活用品牌营销新思维为企业创造品牌核心价值，为中小企业、品牌客户打造独具品质的策略性视觉营销方案。
-					</p>
-				</div>
-			</div>
-		</div>
-	</div><!-- 关于我们 End -->
-	
-	<!-- 为什么选择我们 Start -->
-	<div class="section whyus layout2">
-		<div class="container">
-			<div class="section-text">
-				<h2>为什么选择我们</h2>
-				<p><span class="icon-line"></span>Why Us<span></span></p>
-			</div>
-			<div class="section-main clearfix">
-				<ul class="clearfix">
-	                <li>
-	                    <div class="item">
-	                        <img alt="绝对保真" src="img/icon/feature3.svg">
-	                        <p class="strong">绝对保真</p>
-	                        <p>艺网出售作品均为艺术家原创作品</p>
-	                        <p>绝无仿画及伪作</p>
-	                    </div>
-	                </li>
-	                <li>
-	                    <div class="item">
-	                        <img alt="独家代理" src="img/icon/feature2.svg">
-	                        <p class="strong">独家代理</p>
-	                        <p>艺网出售的作品均为线上下独家代理</p>
-	                        <p>拥有唯一销售权</p>
-	                    </div>
-	                </li>
-	                <li>
-	                    <div class="item">
-	                        <img alt="专业定价" src="img/icon/feature1.svg">
-	                        <p class="strong">专业定价</p>
-	                        <p>艺网汇聚艺术圈拥有话语权的专家团队</p>
-	                        <p>为上线作品进行专业定价</p>
-	                    </div>
-	                </li>
-	            </ul>
-			</div>
-		</div>
-	</div><!-- 为什么选择我们 End -->
-	
-	<!-- 公司环境 Start -->
-	<div class="section company layout1">
-		<div class="container">
-			<div class="section-text">
-				<h2>公司环境</h2>
-				<p><span class="icon-line"></span>Company<span></span></p>
-			</div>
+			<!-- <div class="section-text">
+				<h2>公司简介</h2>
+				<p><span class="icon-line"></span>About Us<span></span></p>
+			</div> -->
 			<div class="section-main clearfix">
 				<div class="left-content">
 					<img src="img/company.jpg" alt="">
@@ -130,52 +89,262 @@
 					<h2>定格映画</h2>
 					<div class="line"></div>
 					<p>
-					艺网倾力打造的当代原创艺术品电商交易服务平台。旨在推动艺术品消费大众化，依托于专业团队，在全国范围内持续挖掘优秀艺术品，将大量经过严格筛选的高质量原创艺术品通过线上艺术品电商平台带给大众，结合线下的体验空间，形成一整套专业、可信赖的艺术消费服务。
+					一家集品牌策划、电商策划、原创图案、标志设计、包装设计、产品摄影、微信营销、画册设计、海报设计为一体的综合性广告设计服务公司。由资深品牌营销策划设计团队组成，旨在为3C数码配件，活用品牌营销新思维为企业创造品牌核心价值，为中小企业、品牌客户打造独具品质的策略性视觉营销方案。
 					</p>
 				</div>
 			</div>
 		</div>
-	</div><!-- 公司环境 End -->
+	</div><!-- 关于我们 End -->
+	
+	<!-- 公司理念 Start -->
+	<div class="section whyus" id="sec-whyus">
+		<div class="container">
+			<!-- <div class="section-text">
+				<h2>公司理念</h2>
+				<p><span class="icon-line"></span>Why Us<span></span></p>
+			</div> -->
+			<div class="section-main clearfix">
+				<ul class="clearfix">
+	                <li>
+	                    <div class="item">
+	                        <img alt="绝对保真" src="img/icon/feature3.svg">
+	                        <p class="strong">愿景 / Vision</p>
+	                        <p>成为全球最诚信设计</p>
+	                        <p>&办公创意服务平台</p>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="item">
+	                        <img alt="独家代理" src="img/icon/feature2.svg">
+	                        <p class="strong">价值观 / Values</p>
+	                        <p>用户第一&nbsp;&nbsp;尊重版权</p>
+	                        <p>追求创意&nbsp;&nbsp;热爱生活</p>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="item">
+	                        <img alt="专业定价" src="img/icon/feature1.svg">
+	                        <p class="strong">使命 / Mission</p>
+	                        <p>设计更轻松</p>
+	                        <p>办公更高效</p>
+	                    </div>
+	                </li>
+	            </ul>
+			</div>
+		</div>
+	</div><!-- 公司理念 End -->
+	
+	<!-- 公司产品 Start -->
+	<div class="section product" id="sec-product">
+		<div class="container">
+			<!-- <div class="section-text">
+				<h2>公司产品</h2>
+				<p><span class="icon-line"></span>Company<span></span></p>
+			</div> -->
+			<p>经过4年的素材积累和数据沉淀，千图网搭建了一个以创意作品库为核心，围绕着设计人群及泛办公人群提供优质创意服务的共享平台。服务内容涵盖了平面广告、电商淘宝、装饰装修、网页UI、产品工业7大主流设计服务，以及PPT模板、Excel模板、文库模板、高清配图、视频音频5大办公人群常用服务，共计60多项细分服务。</p>
+			<div class="section-main clearfix">
+				<ul class="list-cont clearfix">
+					<li class="list-li fl num1">
+						<a href="">
+							<img src="http://icon.qiantucdn.com/revision/images/about_us_01.png" alt="">
+							<div class="mask">
+								<div class="bg"></div>
+								<div class="content">
+									<div class="item-img-panel"> <i class="panel-icon panel-01"></i>
+									</div>
+									<span class="line-panel line-01"></span>
+									<h3 class="item-title">平面广告</h3>
+									<span class="line-panel line-02"></span>
+									<p class="item-solg">为世界创造美</p>
+									<div class="item-desc">
+										<p>累计素材260万+，包括logo标识、</p>
+										<p>画册、插画、包装、宣传单等细分服务，</p>
+										<p>让设计更轻松。</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="list-li fl num2">
+						<a href="">
+							<img src="http://icon.qiantucdn.com/revision/images/about_us_02.png" alt="">
+							<div class="mask">
+								<div class="bg"></div>
+								<div class="content">
+									<div class="item-img-panel"> <i class="panel-icon panel-02"></i>
+									</div>
+									<span class="line-panel line-01"></span>
+									<h3 class="item-title">设计元素</h3>
+									<span class="line-panel line-02"></span>
+									<p class="item-solg">小组件大创意</p>
+									<div class="item-desc">
+										<p>累计素材130万+，包含图标元素、</p>
+										<p>线条形状、艺术字、标签等。</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="list-li fl num3">
+						<a href="">
+							<img src="http://icon.qiantucdn.com/revision/images/about_us_03.png" alt="">
+							<div class="mask">
+								<div class="bg"></div>
+								<div class="content">
+									<div class="item-img-panel">
+										<i class="panel-icon panel-03"></i>
+									</div>
+									<span class="line-panel line-01"></span>
+									<h3 class="item-title">电商淘宝</h3>
+									<span class="line-panel line-02"></span>
+									<p class="item-solg">专注电商精品设计</p>
+									<div class="item-desc">
+										<p>累计素材60万+，包含移动端模板、详</p>
+										<p>情页、节日促销、电商海报等。</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="list-li fl num4">
+						<a href="">
+							<img src="http://icon.qiantucdn.com/revision/images/about_us_04.png" alt="">
+							<div class="mask">
+								<div class="bg"></div>
+								<div class="content">
+									<div class="item-img-panel">
+										<i class="panel-icon panel-04"></i>
+									</div>
+									<span class="line-panel line-01"></span>
+									<h3 class="item-title">PPT/文库</h3>
+									<span class="line-panel line-02"></span>
+									<p class="item-solg">演示不凡</p>
+									<div class="item-desc">
+										<p>累计素材250万+，包括PPT元素、PPT</p>
+										<p>模板、高清配图、实用文档、视频音频</p>
+										<p>等，面向所有泛办公人群，帮助用户提</p>
+										<p>高办公效率。</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="list-li fl num5">
+						<a href="">
+							<img src="http://icon.qiantucdn.com/revision/images/about_us_05.png" alt="">
+							<div class="mask">
+								<div class="bg"></div>
+								<div class="content">
+									<div class="item-img-panel">
+										<i class="panel-icon panel-05"></i>
+									</div>
+									<span class="line-panel line-01"></span>
+									<h3 class="item-title">摄影图库</h3>
+									<span class="line-panel line-02"></span>
+									<p class="item-solg">用心发现美好</p>
+									<div class="item-desc">
+										<p>累计素材190W+，包含商用图片摄影图、图片素材等</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="list-li fl num6">
+						<a href="">
+							<img src="http://icon.qiantucdn.com/revision/images/about_us_06.png" alt="">
+							<div class="mask">
+								<div class="bg"></div>
+								<div class="content">
+									<div class="item-img-panel">
+										<i class="panel-icon panel-06"></i>
+									</div>
+									<span class="line-panel line-01"></span>
+									<h3 class="item-title">更多</h3>
+									<span class="line-panel line-02"></span>
+									<p class="item-solg">不止于此</p>
+									<div class="item-desc">
+										<p>不止于此</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- 公司产品 End -->
 	
 	<!-- 精英团队 Start -->
-	<div class="section ourteam layout2">
+	<div class="section ourteam" id="sec-ourteam">
 		<div class="container">
-			<div class="section-text">
+			<!-- <div class="section-text">
 				<h2>精英团队</h2>
 				<p><span class="icon-line"></span>Our Team<span></span></p>
-			</div>
+			</div> -->
 			<div class="section-main clearfix">
 				<ul class="clearfix">
 	                <li>
 	                    <div class="item">
 	                        <img alt="绝对保真" src="img/team/team1.jpg">
-	                        <p class="strong">绝对保真</p>
-	                        <p>艺网出售作品均为艺术家原创作品</p>
-	                        <p>绝无仿画及伪作</p>
+	                        <p class="strong">John Filmr Doe</p>
+	                        <p>Managing Director</p>
+	                        <div class="team-info">
+								<h5>Nemo enim ipsam<br>voluptatem quia voluptas</h5>
+								<p>sit aspernatur aut odit aut fugit,sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+								<ul class="social">
+									<li><a href="#"><i class="icon-wechat"> </i></a></li>
+									<li><a href="#"><i class="icon-weibo"> </i></a></li>
+									<li><a href="#"><i class="google"> </i></a></li>
+								</ul>
+							</div>
 	                    </div>
 	                </li>
 	                <li>
 	                    <div class="item">
 	                        <img alt="独家代理" src="img/team/team2.jpg">
-	                        <p class="strong">独家代理</p>
-	                        <p>艺网出售的作品均为线上下独家代理</p>
-	                        <p>拥有唯一销售权</p>
+	                        <p class="strong">Chystine Hineu</p>
+	                        <p>Lead Designer</p>
+	                        <div class="team-info">
+								<h5>Nemo enim ipsam<br>voluptatem quia voluptas</h5>
+								<p>sit aspernatur aut odit aut fugit,sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+								<ul class="social">
+									<li><a href="#"><i class="icon-wechat"> </i></a></li>
+									<li><a href="#"><i class="icon-weibo"> </i></a></li>
+									<li><a href="#"><i class="google"> </i></a></li>
+								</ul>
+							</div>
 	                    </div>
 	                </li>
 	                <li>
 	                    <div class="item">
 	                        <img alt="专业定价" src="img/team/team3.jpg">
-	                        <p class="strong">专业定价</p>
-	                        <p>艺网汇聚艺术圈拥有话语权的专家团队</p>
-	                        <p>为上线作品进行专业定价</p>
+	                        <p class="strong">Martin Matrone</p>
+	                        <p>Lead Developer</p>
+	                        <div class="team-info">
+								<h5>Nemo enim ipsam<br>voluptatem quia voluptas</h5>
+								<p>sit aspernatur aut odit aut fugit,sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+								<ul class="social">
+									<li><a href="#"><i class="icon-wechat"> </i></a></li>
+									<li><a href="#"><i class="icon-weibo"> </i></a></li>
+									<li><a href="#"><i class="google"> </i></a></li>
+								</ul>
+							</div>
 	                    </div>
 	                </li>
 	                <li>
 	                    <div class="item">
 	                        <img alt="专业定价" src="img/team/team4.jpg">
-	                        <p class="strong">专业定价</p>
-	                        <p>艺网汇聚艺术圈拥有话语权的专家团队</p>
-	                        <p>为上线作品进行专业定价</p>
+	                        <p class="strong">Steve Flaulkin</p>
+	                        <p>Sr. UI Desigher</p>
+	                        <div class="team-info">
+								<h5>Nemo enim ipsam<br>voluptatem quia voluptas</h5>
+								<p>sit aspernatur aut odit aut fugit,sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+								<ul class="social">
+									<li><a href="#"><i class="icon-wechat"> </i></a></li>
+									<li><a href="#"><i class="icon-weibo"> </i></a></li>
+									<li><a href="#"><i class="google"> </i></a></li>
+								</ul>
+							</div>
 	                    </div>
 	                </li>
 	            </ul>
@@ -183,23 +352,39 @@
 		</div>
 	</div><!-- 精英团队 End -->
 
+	<!-- 合作伙伴 start -->
+	<div class="section partner" id="sec-partner">
+		<div class="container">
+			<!-- <div class="section-text">
+				<h2>合作伙伴</h2>
+				<p><span class="icon-line"></span>Partner<span></span></p>
+			</div> -->
+			<div class="section-main clearfix">
+				<div class="parter-cont clearfix">
+					<span><img src="img/partner/ixdc.png"></span>
+					<span><img src="img/partner/bjx.png"></span>
+					<span><img src="img/partner/kuaiz.png"></span>
+					<span><img src="img/partner/ggm.png"></span>
+					<span><img src="img/partner/xdgg.png"></span>
+					<span><img src="img/partner/ggz.png"></span>
+					<span><img src="img/partner/shtdg.png"></span>
+					<span><img src="img/partner/hmw.png"></span>
+					<span><img src="img/partner/lanjcm.png"></span>
+					<span><img src="img/partner/hux.png"></span>
+					<span><img src="img/partner/36k.png"></span>
+					<span><img src="img/partner/fanbs.png"></span>
+				</div>
+			</div>
+		</div>
+	</div><!-- 合作伙伴 End -->
 
 
-    <div id="x-div2"></div>
-    <script>
-    $.ajax({
-    	url:"index.html", 
-        type: "GET", //静态页用get方法，否则服务器会抛出405错误
-        dataType :"html", 
-        async: false,
-        success: function(data){
-        	var start = data.indexOf('!-- footer导航 start --') - 2;
-        	var stop = data.indexOf('!-- footer导航 End --') + 18;
-            var result = $.trim(data.substring(start,stop));
-            $("#x-div2").html(result);
-        }
-    });
-    </script>	
+
+    <!-- footer导航 start -->
+	<div id="x-div2"></div>
+	<!-- footer导航 End -->
+    	
+
 	<!-- 侧边工具栏 -->
 	<div class="sidebar-menu">
 		<a href="javascript:;" class="sidebar-item sidebar-item-feedback"></a>
@@ -211,5 +396,10 @@
 		</a>
 		<a href="javascript:;" class="sidebar-item sidebar-item-top"></a>
 	</div><!-- 侧边工具栏 End -->
+	
+	<!-- 引入js -->
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/page-about.js"></script>
 </body>
 </html>

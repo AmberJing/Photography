@@ -109,57 +109,7 @@ function slideAnimation() {
 
 
 $(function () {	
-	/* mobile toggle开关菜单*/
-	var clickCount = 0;
-	$('.menu-mobile .menu-icon').click(function(event) {
-		clickCount ++;
-		if(clickCount % 2 == 0){
-			$('.menu-mobile .menu-box').slideUp('slow');
-			$('.mask-section').css({
-				"background-color":"rgba(0,0,0,0.8)"
-			}).slideUp('slow')
-
-		}else{
-			$('.menu-mobile .menu-box').slideDown('slow');
-			$('.mask-section').css({
-				"background-color":"rgba(0,0,0,0.8)"
-			}).slideDown('slow');
-		}
-		
-	});
-	//搜索
-	$('.search-wrap').click(function(event) {
-		$('.search-container').show();
-		$('.mask-section').show();
-	});
-	// 取消搜索
-	$('.search-cancel-btn').click(function(event) {
-		$('.search-container').hide();
-		$('.mask-section').hide();
-	});
-
-	// 滚动条事件
-	$(window).scroll(function(){
-
-		// 获得滚动条卷去的大小
-		var sTop = $(window).scrollTop();
-
-		// 如果滚动条超过200像素，显示回到顶部的按钮
-		if (sTop > 200) {
-			/*
-				注意：做这种动画效果时，确保此元素没有应用css3的transition过渡，否则会冲突
-			*/
-			$('.sidebar-item-top').slideDown(1000);			
-		} else {
-			$('.sidebar-item-top').slideUp(1000);
-		}
-	});
-
-	// 滚动条回到顶部
-	$('.sidebar-item-top').click(function(event) {
-		$('html,body').animate({scrollTop:0},1000);
-	});
-
+	
 })
 
 
