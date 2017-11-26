@@ -8,6 +8,115 @@ h2{
 	font-weight: normal;
 }
 
+/* 模态层 */
+.modal-backdrop {
+  background-color: #ffffff;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+
+
+.rl-modal {
+  position: fixed;
+  background: #fff;
+  z-index: 100000;
+  width: 360px;
+  padding-bottom: 30px;
+  left: 50%;
+  top: 50%;
+  margin: -218px 0 0 -180px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.rl-modal.in {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.rl-modal-header {
+  position: relative;
+  padding: 0 20px;
+}
+.rl-modal-header h1 {
+  font-size: 16px;
+  line-height: 49px;
+  height: 49px;
+  color: #787d82;
+  border-bottom: 1px solid #d0d6d9;
+}
+.rl-modal-header h1 span {
+  float: left;
+  width: 80px;
+  text-align: center;
+  height: 49px;
+  line-height: 49px;
+  cursor: pointer;
+}
+.rl-modal-header .active-title,
+.rl-modal-header span:hover {
+  border-bottom: 1px solid #f01400;
+  color: #f01400;
+}
+.rl-close {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  background: url(/static/module/common/img/nlogin.png) no-repeat 0 0;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+}
+.rl-close:hover {
+  background-position: 0 -21px;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+.rl-modal-body {
+  padding: 0 30px;
+}
+.rl-model-footer {
+  padding: 20px 30px 4px;
+}
+.rlf-tip-globle {
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+}
+.color-red {
+    color: #EF1300!important;
+}
+.pr {
+    position: relative;
+}
+.rl-modal .ipt {
+    width: 279px;
+    padding: 9px 9px 9px 10px;
+    background-color: #fff;
+    border-color: #d0d6d9;
+    box-shadow: 2px 0px 5px 0px #fff;
+}
 /* 顶部导航条 */
 .header-nav{
 	width: 100%;

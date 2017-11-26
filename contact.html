@@ -38,7 +38,7 @@
 	</div><!-- 焦点KV图 End -->
 
 	<!-- 关于我们 start -->
-	<div class="section cantactus ">
+	<div class="section contactus ">
 		<div class="container">
 			<div class="section-text">
 				<h2>联系我们</h2>
@@ -46,20 +46,85 @@
 			</div>
 			<div class="section-main clearfix">
 				<div class="left-content">
-					<img src="img/about-kv.jpg" alt="">
+					<div class="left-wrap">
+						<h3>您对我们的产品有什么问题？</h3>
+						<p>请联系我们，我们会为您找到最佳选项。通过电话、聊天、电子邮件及其他方式，我们愿意为您效劳！</p>
+						<dl>
+							<dt>联系方式</dt>
+							<dd>电话：0756-1234567</dd>
+							<dd>邮箱：travel@mail.com</dd>
+							<dd>地址：广东省珠海市香洲区</dd>
+						</dl>
+						<dl>
+							<dt>上班时间</dt>
+							<dd>周一至周五：8:00-22:00</dd>
+							<dd>周六日：休息</dd>
+						</dl>
+					</div>
 				</div>
 				<div class="right-content">
-					<h2>定格映画</h2>
-					<p>
-					一家集品牌策划、电商策划、原创图案、标志设计、包装设计、产品摄影、微信营销、画册设计、海报设计为一体的综合性广告设计服务公司。由资深品牌营销策划设计团队组成，旨在为3C数码配件，活用品牌营销新思维为企业创造品牌核心价值，为中小企业、品牌客户打造独具品质的策略性视觉营销方案。
-					</p>
+					<div class="img-box">
+						<div class="img-up" style="background: url(img/contact1.jpg) center;"></div>
+						<div class="img-mid" style="background: url(img/contact1.jpg) center;"></div>
+						<div class="img-down" style="background: url(img/contact1.jpg) center;"></div>					
+					</div>
+					<div class="img-box">
+						<div class="img-up" style="background: url(img/contact2.jpg) center;"></div>
+						<div class="img-mid" style="background: url(img/contact2.jpg) center;"></div>
+						<div class="img-down" style="background: url(img/contact2.jpg) center;"></div>					
+					</div>
+					<div class="img-box">
+						<div class="img-up" style="background: url(img/contact3.jpg) center;"></div>
+						<div class="img-mid" style="background: url(img/contact3.jpg) center;"></div>
+						<div class="img-down" style="background: url(img/contact3.jpg) center;"></div>	
+					</div>
+					<!-- <img src="img/contact1.jpg" alt="">
+					<img src="img/contact1.jpg" alt="">
+					<img src="img/contact2.jpg" alt="">
+					<img src="img/contact3.jpg" alt=""> -->
 				</div>
 			</div>
 		</div>
 	</div><!-- 关于我们 End -->
 	
-	<!-- 引入 谷歌地图API 
+	<!-- 留言 start -->
+	<div class="section leaveword">
+		<div class="container">
+			<div class="section-text">
+				<h2>欢迎给我们留言</h2>
+				<p><span class="icon-line"></span>Leave word<span></span></p>
+			</div>
+			<div class="section-main clearfix">
+				<form id="" method="post" action="">
+					<div class="form-item">
+						<!-- <label for="">姓名</label> -->
+						<input type="text" name="name" id="wordsname" class="gfInput gf_name inputSet" placeholder="请填写您的姓名">
+					</div>
+					<div class="form-item">
+						<input type="text" name="mobile" class="gfInput gf_tel inputSet" placeholder="请填写您的手机号">
+					</div>
+					<div class="form-item">
+						<input type="text" name="qq" class="gfInput gf_tel inputSet" placeholder="请填写您的qq">
+					</div>
+					<div class="form-item">
+						<input type="text" name="email" class="gfInput gf_email inputSet" placeholder="请填写您的邮箱地址">
+					</div>
+					<div class="form-item">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</div>
+					<div class="form-item">
+						<input type="submit" value="提交留言" onclick="javascript:;">
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div><!-- 留言 End -->
+
+	
+	<!-- 引入 谷歌地图API -->
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBzE9xAESye6Kde-3hT-6B90nfwUkcS8Yw&sensor=false"></script>
+	<!--<script src="http://ditu.google.com/maps?file=api&hl=zh-CN&v=2&key=abcdefg" type="text/javascript"></script>-->
 	<script>
 		var myCenter=new google.maps.LatLng(51.508742,-0.120850);
 
@@ -79,14 +144,37 @@
 			marker.setMap(map);
 			
 			// 信息窗口
+			 var address="辽宁省大连软件园3号楼"; 
 			var infowindow = new google.maps.InfoWindow({
-				content:"Hello World!"
+				content:address
 			});
 			infowindow.open(map,marker);
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
-	</script>-->
+		
+
+		/*var point = new GLatLng(51.508742,-0.120850);
+		var map = new GMap2(document.getElementById("googleMap"));
+     	var geocoder = new GClientGeocoder();
+	    var address="辽宁省大连软件园3号楼"; 
+	    geocoder.getLatLng(address,function(point) {      
+		    if (!point) {        
+				alert(address + " not found");       
+		    } else {        
+		    	map.setCenter(point, 13);  //地图缩放值为13
+		        // 标记
+		        var marker = new GMarker(point);        
+		        map.addOverlay(marker);  
+		        // 信息窗口      
+		        marker.openInfoWindowHtml(address);
+		        alert(point);     
+		    }
+  		});*/
+
+
+		
+	</script>
 	<!-- 地图 start -->
 	<div class="section map">
 		<div class="container">
