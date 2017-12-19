@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?3sjz9z');
-  src:  url('fonts/icomoon.eot?3sjz9z#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?3sjz9z') format('truetype'),
-    url('fonts/icomoon.woff?3sjz9z') format('woff'),
-    url('fonts/icomoon.svg?3sjz9z#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?40u4qd');
+  src:  url('fonts/icomoon.eot?40u4qd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?40u4qd') format('truetype'),
+    url('fonts/icomoon.woff?40u4qd') format('woff'),
+    url('fonts/icomoon.svg?40u4qd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,8 +24,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-three-bars:before {
+.icon-search:before {
+  content: "\e901";
+}
+.icon-user-o:before {
+  content: "\e902";
+}
+.icon-old-phone:before {
+  content: "\e903";
+}
+.icon-mail-envelope-closed:before {
   content: "\e904";
+}
+.icon-three-bars:before {
+  content: "\e905";
+}
+.icon-wechat:before {
+  content: "\e906";
+}
+.icon-weibo:before {
+  content: "\e907";
 }
 .icon-camera:before {
   content: "\e90f";
@@ -42,30 +60,18 @@
 .icon-printer:before {
   content: "\e954";
 }
-.icon-leaf:before {
-  content: "\e9a4";
-}
-.icon-old-phone:before {
-  content: "\e902";
-}
-.icon-weibo:before {
-  content: "\e907";
-}
-.icon-wechat:before {
-  content: "\e906";
-}
-.icon-weixin:before {
-  content: "\e906";
-}
-.icon-bars:before {
-  content: "\e905";
-}
-.icon-user-o:before {
-  content: "\e901";
-}
-.icon-mail-envelope-closed:before {
-  content: "\e903";
-}
-.icon-search:before {
+.icon-chat:before {
   content: "\e900";
+}
+.icon-comment:before {
+  content: "\e900";
+}
+.icon-talk:before {
+  content: "\e900";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-arrow-up2:before {
+  content: "\ea3a";
 }

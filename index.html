@@ -41,7 +41,7 @@
 							<li><a href="#">风景摄影</a></li>
 						</ul>
 					</li>
-					<li><a href="">摄影师</a></li>
+					<li><a href="author.html">摄影师</a></li>
 					<li><a href="about.html">关于我们</a></li>
 					<li><a href="contact.html">联系我们</a></li>
 				</ul>	
@@ -106,20 +106,24 @@
 		</div>
 		<!-- 轮播容器 start -->
 		<div class="slide-container">
-			<div class="slide-main">
-				<div class="img-item">
+			<div class="slide-wrapper slide-main clearfix">
+				<div class="slide-item">
 					<img src="img/banner1.jpg" alt="">
 				</div>
-				<div class="img-item" >
+				<div class="slide-item">
 					<img src="img/banner2.jpg" alt="">
 				</div>
-				<div class="img-item" >
+				<div class="slide-item">
 					<img src="img/banner3.jpg" alt="">
 				</div>
 			</div>
-			<div class="slide-btns"></div>
-			<a href="javascript:;" class="btn-prev"></a>
-			<a href="javascript:;" class="btn-next"></a>
+			<div class="slide-pagination">
+				<span class="active"></span>
+				<span></span>
+				<span></span>
+			</div>
+			<a href="javascript:;" class="slide-btn-prev"></a>
+			<a href="javascript:;" class="slide-btn-next"></a>
 		</div><!-- 轮播容器 End -->
 	</div><!-- 焦点轮播图 End -->
 	
@@ -445,54 +449,49 @@
 			</div>	
 		</div>
 	</div><!-- footer导航 End -->
-	<!-- 侧边工具栏 -->
+	<!-- 侧边工具栏-->
 	<div class="sidebar-menu">
-		<a href="javascript:;" class="sidebar-item sidebar-item-feedback"></a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-feedback">
+			<i class="icon-chat"></i>
+			<span class="">意见反馈</span>
+		</a>
 		<a href="javascript:;" class="sidebar-item sidebar-item-weixin">
-			<span class="sidebar-layer"></span>
+			<i class="icon-wechat"></i>	
+			<span class="">公众账号</span>
+			<div class="sidebar-layer"></div>
 		</a>
 		<a href="javascript:;" class="sidebar-item sidebar-item-app">
-			<span class="sidebar-layer"></span>
+			<i class="icon-mobile"></i>
+			<span class="">APP下载</span>
+			<div class="sidebar-layer"></div>
 		</a>
-		<a href="javascript:;" class="sidebar-item sidebar-item-top"></a>
+		<a href="javascript:;" class="sidebar-item sidebar-item-top">
+			<i class="icon-arrow-up2"></i>
+			<span class="">返回顶部</span>
+		</a>
 	</div><!-- 侧边工具栏 End -->
 	
-	<!-- <link rel="stylesheet" type="text/css" href="css/default.css" />
-	<link rel="stylesheet" type="text/css" href="fonts/vicons/vicons-font.css" />
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/menu.css" />
-	<div class="menu toolbar">
-		<div class="menu-wrapper">
-			<ul class="menu-items">
-				<li class="menu-item">
-					<button class="menu-item-button">
-						<i class="menu-item-icon icon icon-weixin"></i>
-					</button>
-					<div class="menu-item-bounce"></div>
-				</li>
-				<li class="menu-item">
-					<button class="menu-item-button">
-						<i class="menu-item-icon icon icon-weibo"></i>
-					</button>
-					<div class="menu-item-bounce"></div>
-				</li>
-				<li class="menu-item">
-					<button class="menu-item-button">
-						<i class="menu-item-icon icon icon-wechat"></i>
-					</button>
-					<div class="menu-item-bounce"></div>
-				</li>
-			</ul>
-			<button class="menu-toggle-button">
-				<i class="fa fa-plus menu-toggle-icon"></i>
-			</button>
-		</div>
-	</div> -->
+	<!-- 登录注册界面 Start -->
+	<!-- 登录注册界面 End -->
 
 	<!-- 引入js -->
 	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="js/common.js"></script> 
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		// var slide = new Slide('.slide-container', {
+		// 	 autoplay:true,
+		// 	 speed: 300,
+		// 	 direction：left,
+	 //      navigation: {
+	 //        nextEle: '.slide-btn-next',
+	 //        prevEle: '.slide-btn-prev',
+	 //      },
+	 //      pagination: {
+	 //        ele: '.slide-pagination',
+	 //      }
+	 //    });
+	</script>
 
 	<!--<script src="js/TweenMax.min.js"></script>
 	<script src="js/menu.js"></script>-->

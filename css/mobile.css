@@ -1,15 +1,15 @@
 @media (max-width: 1600px) { 
-  .slide-container .slide-main .img-item img{
+  /* .slide-container .slide-main .slide-item img{
     width: 1600px;
     margin-left: -800px;
-  }
+  } */
 }
 /* 大屏幕（大桌面显示器，小于等于 1200px） */
 @media (max-width: 1200px) { 
-  .slide-container .slide-main .img-item img{
-    width: 1400px;
-    margin-left: -700px;
-  }
+/*   .slide-container .slide-main .slide-item img{
+  width: 1400px;
+  margin-left: -700px;
+} */
   /* 最新作品 */
   .brand_content{
      height: 425px;
@@ -131,10 +131,13 @@
   }
 
   /* key-visual轮播图 */
-  .slide-container .slide-main .img-item img{
+  .key-visual{
+    height: calc(100% - 60px);
+  }
+  /* .slide-container .slide-main .slide-item img{
     width: 1000px;
     margin-left: -500px;
-  }
+  } */
   .key-visual .slide-txt p{
     font-size: 1.5em;
     line-height: 1.2em;

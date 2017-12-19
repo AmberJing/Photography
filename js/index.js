@@ -1,85 +1,105 @@
 /*
 	轮播
  */
-var slide_container = $('.slide-container');	// 获取轮播容器
-var imgHeight = slide_container.find('img').height();	// 获取图片的高度和宽度
-var imgCount = slide_container.find('.img-item').length;	// 计算图片数量
-var currentIndex = 0;	//当前索引
-var timer = undefined; 	//定时器对象
+(function($){
+  function slider(options){
+    this.opts=$.extend({},slider.defaluts,options);//2.这里用来合并对象获得一个新的对象
+    this._imgSlider();
+  }
+  //设置默认值
+  slider.defaluts={
+    slideContainer:null,
+    slideElement:null,
+    imgElement:null,
+    buttonElement:null,
+    leftBtn:null,
+    rightBtn:null,
+    time:2000
+  }
+  slider.prototype._imgSlider=function(){
 
-//slide_container.height(imgHeight);
-// 除第一张外都隐藏
-slide_container.find(".img-item:gt(0)").css("display","none");
+    var opts=this.opts,
+        currIndex = 0,
+        imgCount = opts.imgElement.length,//图片数量
+        imgWidth =  opts.imgElement.width(),//图片宽度
+        timeInter = null;
 
-// 动态添加圆点切换按钮
-var btnTemp = '<span class="active"></span>';
-for (var i = 1; i < imgCount; i++) {
-	btnTemp += '<span></span>';
-}
-slide_container.find('.slide-btns').append(btnTemp);
+    if(opts.slideElement=='') return;
 
-// 圆点按钮点击事件
-slide_container.find(".slide-btns span").click(function() {
-	// 关闭已经存在的定时器
-	clearInterval(timer);
+    // 滑动动画
+    function slideAnim(currIndex){
+      console.log(imgWidth);
+      var offset = imgWidth * currIndex;
+      opts.slideElement.css({
+          "transform":"translate3d(-"+ offset +"px,0,0)",
+          "transition":"800ms"
+      });
+    }
 
-	// 赋值索引
-	currentIndex = $(this).index();
-	// 轮播
-	slide(currentIndex);
+    function buttonShow(currIndex){
+     opts.buttonElement.find('span').siblings().removeClass("active").eq(currIndex).addClass("active");
 
-	//开启新的定时器
-	timer = setInterval("slideAnimation()", 4000);
-	
-});
+  }
 
-function slide(currentIndex){
-	
-	// console.log(currentIndex);
-	// 设置当前按钮背景色
-	slide_container.find(".slide-btns span").removeClass('active');
-	slide_container.find(".slide-btns span").eq(currentIndex).addClass('active');
-	
-	// 显示当前图片
-	slide_container.find(".img-item").hide();
-	slide_container.find(".img-item").eq(currentIndex).fadeIn(1000); //淡入效果
+    /*2.首先左右两个箭头点击:左箭头点击*/
+    opts.leftBtn.click(function(){
+      // stopAnim();
 
-}
+      currIndex --;
+      if(currIndex < 0){
+        currIndex = imgCount - 1;
+      }
+      buttonShow(currIndex);
+      slideAnim(currIndex);
 
-// 左箭头点击切换
-slide_container.find('.btn-prev').click(function(){
+      // startAnim();
+    })
 
-	currentIndex --;
+    /*2.首先左右两个箭头点击：右箭头点击*/
+    opts.rightBtn.click(function(){
+      // stopAnim();
 
-	//如果超过第一张，设置到最后一张
-	if (currentIndex < 0) {
-		currentIndex = imgCount - 1;
-	}
+      currIndex ++;
+      if(currIndex >= imgCount){
+        currIndex = 0;
+      }
+      buttonShow(currIndex);
+      slideAnim(currIndex);
 
-	slide_container.find(".slide-btns span").eq(currentIndex).click();
+      // startAnim();
+    })
+
+    opts.buttonElement.find('span').click(function(){
+	   // stopAnim();
+	    console.log($(this).index());
+	    // 赋值索引
+	    currIndex = $(this).index();
+	    buttonShow(currIndex);
+	    slideAnim(currIndex);
+	    // startAnim();
+   })
+
+
+  }
+  //类级别的插件开发，即$.extend()扩展jquery对象本身；1.这里用来扩展方法
+  $.extend({
+    slider:function(options){
+      new slider(options);
+    }
+  })
+})(jQuery)
+
+
+
+$.slider({
+    slideContainer:$(".slide-container"),
+    slideElement:$(".slide-wrapper"),
+    imgElement:$(".slide-item"),
+    buttonElement:$(".slide-pagination"),
+    leftBtn:$(".slide-btn-prev"),
+    rightBtn:$(".slide-btn-next"),
+    time:2000
 })
-// 右箭头点击切换
-slide_container.find('.btn-next').click(function(){
-
-	currentIndex ++ ;
-
-	//如果超过最后一张，设置到第一张
-	if (currentIndex >= imgCount) {
-		currentIndex = 0;
-	}
-	slide_container.find(".slide-btns span").eq(currentIndex).click();
-})
-//设置循环定时器
-timer = setInterval("slideAnimation()", 4000);
-function slideAnimation() {
-	currentIndex ++;
-	if (currentIndex == imgCount) {
-		//如果图片播放到最后一张，那么index的值恢复为0
-		currentIndex = 0;
-	}
-
-	slide(currentIndex);
-}
 
 	/*
 		下雨
@@ -106,21 +126,6 @@ function slideAnimation() {
 
 
 
-
-
-$(function () {	
-	
-})
-
-
-
-
-
-
-
-
-
-
 // <script type="application/javascript">
 //     /*
 //      * Banner 轮播图类
@@ -136,9 +141,8 @@ $(function () {
 //             'duration':3,               // 切换时间间隔
 //             'animation':0.5         // 动画时间
 //         };
-//         config = $.extend(true, this._default, config);// 合并this._default和config(true->深度拷贝)
-//         this.config = config;
-//         this.init(config);
+//         this.config = $.extend(true, this._default, config);// 合并this._default和config(true->深度拷贝)
+//         this.init(this.config);
 //     }
 //     Banner.prototype.init = function(config) {
 //         this.animateStyle = 'normal';       // 动画效果 ( 根据动画效果, 不同的方法有不同的实现 )
