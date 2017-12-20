@@ -15,10 +15,7 @@
      height: 425px;
   }
   /*  优秀摄影师  */
-  .workstar-section .workstar-list{
-    width: 75%;
-  }
-  .hex:nth-child(12){
+ /* .hex:nth-child(12){
     margin-left: 5px;
   } 
   .hex:nth-child(1),.hex:nth-child(10){
@@ -26,19 +23,9 @@
   }
   .hex:nth-child(14){
     margin-left: 166px;
-  }
+  }*/
 }
 
-/*@media (max-width: 1100px) { 
-  .workstar-section .workstar-list{
-    width: 80%;
-  }
-}
-@media (max-width: 1024px) { 
-  .workstar-section .workstar-list{
-    width: 85%;
-  }
-}*/
 
 /* 中等屏幕（桌面显示器，小于等于 992px） */
 @media (max-width: 992px) { 
@@ -181,10 +168,6 @@
     margin: 1% 1%;
   }
   /*优秀摄影师*/
-  .workstar-section .workstar-list{
-    width: 90%;
-  }
-  .workstar-list .hex{margin-left: 5px;}
 
 
   /*footer*/
@@ -224,22 +207,97 @@
     width: 98%;
     margin: 1% 1%;
   }
-  .workstar-section .workstar-list{
-    width: 100%;
-    padding: 40px 10%;
-  }
   
 }
 
 
- /*优秀摄影师*/
-@media (max-width: 376px){
-  .workstar-section .workstar-list{
-    padding: 40px 7%;
-  }
+
+/* 摄影师 */
+/*** SPACING AND SIZING *****************************************************************/
+@media (min-width:1201px) { /* 5-6  hexagons per row (5+6 = 11)*/
+    #hexGrid{width: 90%;}
+    .hex {
+        width: 16%; 
+        padding-bottom: 18.47%; /* =  width / sin(60deg) */
+        margin: 0 0.3%;
+    }
+    .hex:nth-child(11n+6),.hex:nth-child(11n+7),
+    .hex:nth-child(11n+8),.hex:nth-child(11n+9),
+    .hex:nth-child(11n+10),.hex:nth-child(11n+11) {
+        margin-top: -3.976%;
+        margin-bottom: -3.976%;
+    }
+    .hex:nth-child(11n+1),.hex:nth-child(11n+6) {
+        clear: left;
+    }
+    .hex:nth-child(11n+1){
+        margin-left: 8.6%;
+    }
 }
-@media (max-width: 320px){
-  .workstar-section .workstar-list{
-    padding: 40px 0;
-  }
+@media (max-width: 1200px) and (min-width:901px) {/*  4-4  hexagons per row */
+    .hex {
+        width: 19.2%;
+        padding-bottom: 22.17%; /* =  width / sin(60deg) */
+        margin: 0 0.5%;
+    }
+    .hex:nth-child(8n+5),.hex:nth-child(8n+6),
+    .hex:nth-child(8n+7),.hex:nth-child(8n+8) {
+        margin-top: -4.676%;
+        margin-bottom: -4.676%;
+    }
+    .hex:nth-child(8n+1),.hex:nth-child(8n+5){
+        clear: left;
+    }
+    .hex:nth-child(8n+1){
+        margin-left: 10.6%;
+    }
+
+}
+@media (max-width: 900px) and (min-width:601px) { /*  4-3  hexagons per row */
+    .hex {
+        width: 23.25%; /* = (100-3) / 4 */
+        padding-bottom: 27.001%; /* =  width / sin(60deg) */
+        margin: 0 0.5%;
+    }
+    .hex:nth-child(7n+5),.hex:nth-child(7n+6),.hex:nth-child(7n+7) {
+        margin-top: -6.134%;
+        margin-bottom: -6.134%;
+    }
+    .hex:nth-child(7n+1), .hex:nth-child(7n+5){
+        clear: left;
+    }
+    .hex:nth-child(7n+5){
+        margin-left: 12.5%;
+    }
+    .hex:nth-child(15){
+        margin-left: 24.5%;
+    }
+}
+@media (max-width: 600px) and (min-width:401px){
+    .forPC {display: none;}
+    .hex {
+        width: 31.666%; 
+        padding-bottom: 36.720%; 
+        margin: 0 0.8%;
+    }
+    .hex:nth-child(1), .hex:nth-child(2){
+        margin-bottom: -4.423%;
+    }
+    .hex:first-child {
+        margin-left: 17.5%;
+    }
+}
+@media (max-width: 400px) {
+    .forPC{display: none;}
+    .hex {
+        width: 48.5%; 
+        padding-bottom: 55.158%; 
+    }
+    .hex:nth-child(3n+2) {
+        margin-right: 2%;
+    }
+    .hex:first-child {
+        margin-left: 26%;
+        margin-bottom: -7.423%;
+    }
 }

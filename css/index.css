@@ -264,9 +264,9 @@
 
 .brand_content .list_img ul li {
 	width: 23%;
-	height: 50%;
+	height: 48%;
 	margin: 0 0.5%;
-	padding: 0 0.5%;
+	padding: 0.5%;
 	float:left;
 	background: #fff;
 }
@@ -416,89 +416,123 @@
 }
 
 /*section3:优秀摄影师*/
-.workstar-section .workstar-list{
-	width: 85%;
-	margin: 0 auto;
-	padding: 40px 20px;
-	box-sizing: border-box;
+#hexGrid {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
 }
-.hex{
-	width: 150px;
-	height: 86px;
-	position: relative;
-	float: left;
-	margin: 25px 5px;
-	z-index: 1;
-	text-align: center;
+.hex {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    visibility: hidden;
+    outline:1px solid transparent; /* fix for jagged edges on hover transition */
+    -webkit-transform: rotate(-60deg) skewY(30deg) translateZ(-1px);
+        -ms-transform: rotate(-60deg) skewY(30deg) translateZ(-1px);
+            transform: rotate(-60deg) skewY(30deg) translateZ(-1px);
+}
+.hex *{
+    outline:1px solid transparent; /* fix for jagged edges on hover transition */
+}
+.hexbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;/*图片溢出隐藏*/
+    visibility: visible;    
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ccc;
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+        -ms-transform: skewY(-30deg) rotate(60deg);
+            transform: skewY(-30deg) rotate(60deg);
+}
 
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: auto 173px;
+/*** HEX CONTENT **********************************************************************/
+.hex .hexbox > img {
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
 }
-.hex .corner-1,.hex .corner-2{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: inherit;
-	overflow: hidden;
-	backface-visibility: hidden;
+
+.hex .hexbox > h1, .hex .hexbox > p {
+    position: absolute;
+    width: 102%;
+    left:-1%; /* prevent line on the right where background doesn't cover image */
+    margin:0;
+    padding: 5%;
+    box-sizing:border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+    -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+            transition:          transform .2s ease-out, opacity .3s ease-out;
 }
-.hex .corner-1{
-	transform: rotate(60deg);
-	z-index: -1;
+.hex .hexbox > h1 {
+    bottom: 50%;
+    padding-top:50%;
+    font-size: 1.4em;
+    z-index: 1;
+    -webkit-transform:translateY(-100%) translatez(-1px);
+        -ms-transform:translateY(-100%) translatez(-1px);
+            transform:translateY(-100%) translatez(-1px);
 }
-.hex .corner-2{
-	transform: rotate(-60deg);
-	z-index: -2;
+.hex .hexbox > h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 10%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
 }
-.hex .corner-1:before,.hex .corner-2:before{
-	display: block;
-	width: 173px;
-	height: 173px;
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: inherit;
-	z-index: 1;
+.hex .hexbox > p {
+    top: 50%;
+    padding-bottom:50%;
+    -webkit-transform:translateY(100%) translatez(-1px);
+        -ms-transform:translateY(100%) translatez(-1px);
+            transform:translateY(100%) translatez(-1px);
 }
-.hex .corner-1:before{
-	transform-origin: 0 0; 
-	transform: rotate(-60deg) translate(-86px, 0px);
+.hex .hexbox .inner {
+    width: 100%;
+    height: 50%;
+    margin-top: 32%;
+    color: #eee;
 }
-.hex .corner-2:before{
-	transform: rotate(60deg) translate(-43px, -12px);
+.hex .hexbox .inner > h4 {
+    margin: 0;
 }
-.bgc{
-	background-color: #ccc;/*rgb((255, 251, 240));*/
+.hex .hexbox .inner > hr {
+    width: 60%;
+    margin: 10px auto;
+    border: 0;
+    border-top: 1px solid #eee;
 }
-		
-.hex .inner { color:#eee; }
-.hex h4 { margin:0;	}
-.hex hr {
-	width:60%;
-	margin:10px auto;
-	border:0;
-	border-top:1px solid #eee;	
+.hex .hexbox .inner > p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
 }
-.hex p {
-	width:80%;
-	margin:0 auto;
-	font-size:16px;
+
+/*** HOVER EFFECT  **********************************************************************/
+.hex:hover{
+	-webkit-transform:rotate(-60deg) skewY(30deg) translateZ(-1px) scale(1.2);
+        -ms-transform:rotate(-60deg) skewY(30deg) translateZ(-1px) scale(1.2);
+    		transform:rotate(-60deg) skewY(30deg) translateZ(-1px) scale(1.2);
+    transition: transform .3s;
+    z-index:2; 
 }
-.hex.hex-1 {background: #74cddb;}
-.hex.hex-2 {background: #f5c53c;}
-.hex.hex-3 {background: #80b971;}
-.hex:hover	{
-	transform: scale(1.2);
-	z-index: 2;
-	transition: all .3s;
+.hexbox:hover >h1,.hexbox:hover  >p{
+    -webkit-transform:translateY(0%) translateZ(-1px) scale(1.001);
+        -ms-transform:translateY(0%) translateZ(-1px) scale(1.001);
+            transform:translateY(0%) translateZ(-1px) scale(1.001);
 }
-.hex:nth-child(1),.hex:nth-child(12){
-	margin-left: 86px;
-}	
+
 
 /* section banner1*/
 .banner1{
